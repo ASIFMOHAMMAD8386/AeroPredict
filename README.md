@@ -15,7 +15,7 @@ ML_Project/
 ├── models/           Saved fitted classifier and regressor pipelines
 ├── results/          Measured metrics, comparison and prediction CSVs
 ├── graphs/           EDA and model-evaluation figures
-├── reports/          Existing Word project report, copied unchanged
+├── reports/          Word report with repository and demo links
 ├── presentations/    Class PPT and team explanation/viva PPT
 ├── README.md
 ├── requirements.txt
@@ -93,18 +93,14 @@ Use `reports/Project_Report.docx` for the existing report and the two files in
 the proposed-system-only revision. The supplied Word report has the repository and public-demo hyperlinks added to its appendix. Its original content and first two pages are preserved. The PPTs were copied unchanged.
 `SOURCE_MANIFEST.json` records the copied files and SHA-256 hashes.
 
-Create an empty GitHub repository, then from this project folder run:
+The project is published in this repository. To download a working Git checkout, run:
 
 ```powershell
-git init
-git add .
-git commit -m "Add AeroPredict project submission"
-git branch -M main
-git remote add origin YOUR_GITHUB_REPOSITORY_URL
-git push -u origin main
+git clone https://github.com/ASIFMOHAMMAD8386/AeroPredict.git
 ```
 
-Replace `YOUR_GITHUB_REPOSITORY_URL` with your own repository URL. Private runtime files,
+Private runtime files,
 API settings and dependencies are excluded by `.gitignore`. Third-party notices remain
 with their browser libraries. This repository contains the submitted project. The separate `SLAP_Report_Evidence/` folder contains the logistic/ridge experiment referenced by the Word report; its metrics are distinct from the RF study in `results/`. To reproduce that report experiment, open that folder and follow Appendix A 1.
+
 
