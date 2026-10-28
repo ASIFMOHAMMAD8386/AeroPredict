@@ -1,0 +1,15 @@
+{
+  "name": "aeropredict-local-presentation",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "launch": "node launch.mjs",
+    "stop": "node stop.mjs",
+    "test": "node tests/test-projects.mjs && node tests/route-controls.mjs && node tests/flight-sequence.mjs && node tests/airport-activity.mjs && node tests/weather-unloading.mjs && node tests/classroom-sharing.mjs && node tests/local-server.mjs"
+  }
+}

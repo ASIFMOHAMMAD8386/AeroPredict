@@ -1,0 +1,21 @@
+# Private settings and runtime state
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+**/.local/
+**/node_modules/
+**/__pycache__/
+**/.ipynb_checkpoints/
+.venv/
+*.pyc
+*.log
+*.sqlite
+*.sqlite3
+*.blend1
+dataset/regenerated/
+src/website/public/classroom/
+src/website/presentation/*qr*
+src/website/presentation/PUBLIC_LINKS.txt

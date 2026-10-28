@@ -1,0 +1,39 @@
+{
+  "source": "Entirely synthetic; not Aviationstack data or observed historical flight performance",
+  "seed": 20261019,
+  "rows": 6000,
+  "splits": {
+    "train": 4200,
+    "validation": 900,
+    "test": 900
+  },
+  "classification_target": "delayed_15_plus",
+  "regression_target": "departure_delay_minutes",
+  "features": [
+    "origin",
+    "destination",
+    "departure_hour_ist",
+    "day_of_week",
+    "month",
+    "weather",
+    "congestion_pct",
+    "incoming_delay_minutes",
+    "distance_km",
+    "scheduled_duration_minutes"
+  ],
+  "exclude_from_features": [
+    "record_id",
+    "data_source",
+    "split",
+    "flight_date",
+    "scheduled_departure_ist",
+    "departure_delay_minutes",
+    "delayed_15_plus"
+  ],
+  "generator": "build-training-data.mjs",
+  "date_range": [
+    "2025-01-01",
+    "2025-10-27"
+  ],
+  "delayed_rows": 3824
+}

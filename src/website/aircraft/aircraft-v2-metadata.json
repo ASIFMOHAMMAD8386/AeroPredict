@@ -1,0 +1,13 @@
+{
+  "meshes": 12,
+  "faces": 32739,
+  "glb": "C:\\Users\\24u11\\Documents\\Codex\\2026-10-18\\th\\outputs\\AeroPredict_Local_Presentation\\aircraft\\aeropredict-airliner-v2.glb",
+  "blend": "C:\\Users\\24u11\\Documents\\Codex\\2026-10-18\\th\\outputs\\AeroPredict_Local_Presentation\\aircraft\\aeropredict-airliner-v2.blend",
+  "dimensions_m": [
+    36.2,
+    36.9,
+    9.5
+  ],
+  "exported_triangles": 62576,
+  "glb_bytes": 1700852
+}

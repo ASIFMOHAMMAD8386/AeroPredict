@@ -1,0 +1,3 @@
+origin,destination,departure_hour_ist,day_of_week,month,weather,congestion_pct,incoming_delay_minutes,distance_km,scheduled_duration_minutes,rf_probability,rf_class,rf_minutes,website_rule_minutes,scope
+HYD,BLR,18,5,10,Clear,35,10,456,72,0.2886573150564071,0,8.123504551302284,21,"New hypothetical scenario, no observed outcome"
+HYD,BLR,18,5,10,Thunderstorm,85,45,456,72,0.9709666945296895,1,53.2115566622616,66,"New hypothetical scenario, no observed outcome"

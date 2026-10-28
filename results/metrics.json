@@ -1,0 +1,730 @@
+{
+  "scope": "Offline experiment on unchanged synthetic data. Not connected to the website.",
+  "seed": 42,
+  "features": [
+    "origin",
+    "destination",
+    "departure_hour_ist",
+    "day_of_week",
+    "month",
+    "weather",
+    "congestion_pct",
+    "incoming_delay_minutes",
+    "distance_km",
+    "scheduled_duration_minutes"
+  ],
+  "categorical_features": [
+    "origin",
+    "destination",
+    "weather"
+  ],
+  "numeric_features": [
+    "departure_hour_ist",
+    "day_of_week",
+    "month",
+    "congestion_pct",
+    "incoming_delay_minutes",
+    "distance_km",
+    "scheduled_duration_minutes"
+  ],
+  "targets": [
+    "delayed_15_plus",
+    "departure_delay_minutes"
+  ],
+  "feature_count": 10,
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "pandas": "3.0.1",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0"
+  },
+  "data_hashes": {
+    "train": "83bd05093396d08cad987da228b72bfde02ab3cce59d16df422f1277626d3afa",
+    "validation": "227dac070515594935d387fedfa3ccd41000079beef2ba18728cd93b05de3b11",
+    "test": "df82b04cf46b4e1522fdfd722a1431fb206af86d16480dcc6e98c98d6745f209"
+  },
+  "splits": {
+    "train": {
+      "rows": 4200,
+      "start": "2025-01-01",
+      "end": "2025-07-29",
+      "delayed": 2634
+    },
+    "validation": {
+      "rows": 900,
+      "start": "2025-07-30",
+      "end": "2025-09-12",
+      "delayed": 593
+    },
+    "test": {
+      "rows": 900,
+      "start": "2025-09-13",
+      "end": "2025-10-27",
+      "delayed": 597
+    }
+  },
+  "classification": [
+    {
+      "family": "Baseline",
+      "validation_selection_score": 0.7943737441393168,
+      "parameters": {
+        "constant": null,
+        "random_state": null,
+        "strategy": "most_frequent"
+      },
+      "accuracy": 0.6633333333333333,
+      "precision": 0.6633333333333333,
+      "recall": 1.0,
+      "f1": 0.7975951903807615,
+      "roc_auc": 0.5,
+      "confusion_matrix": [
+        [
+          0,
+          303
+        ],
+        [
+          0,
+          597
+        ]
+      ]
+    },
+    {
+      "family": "Decision Tree",
+      "validation_selection_score": 0.8450946643717728,
+      "parameters": {
+        "ccp_alpha": 0.0,
+        "class_weight": null,
+        "criterion": "gini",
+        "max_depth": 6,
+        "max_features": null,
+        "max_leaf_nodes": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 5,
+        "min_samples_split": 2,
+        "min_weight_fraction_leaf": 0.0,
+        "monotonic_cst": null,
+        "random_state": 42,
+        "splitter": "best"
+      },
+      "accuracy": 0.7988888888888889,
+      "precision": 0.8795620437956204,
+      "recall": 0.8073701842546064,
+      "f1": 0.8419213973799127,
+      "roc_auc": 0.8835624768507001,
+      "confusion_matrix": [
+        [
+          237,
+          66
+        ],
+        [
+          115,
+          482
+        ]
+      ]
+    },
+    {
+      "family": "Random Forest",
+      "validation_selection_score": 0.8503401360544217,
+      "parameters": {
+        "bootstrap": true,
+        "ccp_alpha": 0.0,
+        "class_weight": null,
+        "criterion": "gini",
+        "max_depth": 8,
+        "max_features": "sqrt",
+        "max_leaf_nodes": null,
+        "max_samples": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 5,
+        "min_samples_split": 2,
+        "min_weight_fraction_leaf": 0.0,
+        "monotonic_cst": null,
+        "n_estimators": 200,
+        "n_jobs": 2,
+        "oob_score": false,
+        "random_state": 42,
+        "verbose": 0,
+        "warm_start": false
+      },
+      "accuracy": 0.8111111111111111,
+      "precision": 0.8700173310225303,
+      "recall": 0.8408710217755444,
+      "f1": 0.8551959114139693,
+      "roc_auc": 0.9004870336279858,
+      "confusion_matrix": [
+        [
+          228,
+          75
+        ],
+        [
+          95,
+          502
+        ]
+      ]
+    }
+  ],
+  "regression": [
+    {
+      "family": "Baseline",
+      "validation_selection_score": -20.95842857142857,
+      "parameters": {
+        "constant": null,
+        "quantile": null,
+        "strategy": "mean"
+      },
+      "mae": 21.82766666666667,
+      "rmse": 26.718077631738417,
+      "r2": -0.0007383146013779651
+    },
+    {
+      "family": "Decision Tree",
+      "validation_selection_score": -9.935146737723311,
+      "parameters": {
+        "ccp_alpha": 0.0,
+        "criterion": "squared_error",
+        "max_depth": 6,
+        "max_features": null,
+        "max_leaf_nodes": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 5,
+        "min_samples_split": 2,
+        "min_weight_fraction_leaf": 0.0,
+        "monotonic_cst": null,
+        "random_state": 42,
+        "splitter": "best"
+      },
+      "mae": 9.502549009305149,
+      "rmse": 13.333650157945588,
+      "r2": 0.7507654619884937
+    },
+    {
+      "family": "Random Forest",
+      "validation_selection_score": -9.341382235541495,
+      "parameters": {
+        "bootstrap": true,
+        "ccp_alpha": 0.0,
+        "criterion": "squared_error",
+        "max_depth": 8,
+        "max_features": 1.0,
+        "max_leaf_nodes": null,
+        "max_samples": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 5,
+        "min_samples_split": 2,
+        "min_weight_fraction_leaf": 0.0,
+        "monotonic_cst": null,
+        "n_estimators": 200,
+        "n_jobs": 2,
+        "oob_score": false,
+        "random_state": 42,
+        "verbose": 0,
+        "warm_start": false
+      },
+      "mae": 9.146723868905655,
+      "rmse": 12.917987412989088,
+      "r2": 0.7660625094411708
+    }
+  ],
+  "validation_search": [
+    {
+      "task": "classification",
+      "family": "Baseline",
+      "score": 0.7943737441393168,
+      "parameters": {
+        "constant": null,
+        "random_state": null,
+        "strategy": "most_frequent"
+      }
+    },
+    {
+      "task": "classification",
+      "family": "Decision Tree",
+      "score": 0.8450946643717728,
+      "parameters": {
+        "ccp_alpha": 0.0,
+        "class_weight": null,
+        "criterion": "gini",
+        "max_depth": 6,
+        "max_features": null,
+        "max_leaf_nodes": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 5,
+        "min_samples_split": 2,
+        "min_weight_fraction_leaf": 0.0,
+        "monotonic_cst": null,
+        "random_state": 42,
+        "splitter": "best"
+      }
+    },
+    {
+      "task": "classification",
+      "family": "Decision Tree",
+      "score": 0.834901625320787,
+      "parameters": {
+        "ccp_alpha": 0.0,
+        "class_weight": null,
+        "criterion": "gini",
+        "max_depth": 12,
+        "max_features": null,
+        "max_leaf_nodes": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 5,
+        "min_samples_split": 2,
+        "min_weight_fraction_leaf": 0.0,
+        "monotonic_cst": null,
+        "random_state": 42,
+        "splitter": "best"
+      }
+    },
+    {
+      "task": "classification",
+      "family": "Decision Tree",
+      "score": 0.838655462184874,
+      "parameters": {
+        "ccp_alpha": 0.0,
+        "class_weight": null,
+        "criterion": "gini",
+        "max_depth": null,
+        "max_features": null,
+        "max_leaf_nodes": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 5,
+        "min_samples_split": 2,
+        "min_weight_fraction_leaf": 0.0,
+        "monotonic_cst": null,
+        "random_state": 42,
+        "splitter": "best"
+      }
+    },
+    {
+      "task": "classification",
+      "family": "Random Forest",
+      "score": 0.8456260720411664,
+      "parameters": {
+        "bootstrap": true,
+        "ccp_alpha": 0.0,
+        "class_weight": null,
+        "criterion": "gini",
+        "max_depth": 8,
+        "max_features": "sqrt",
+        "max_leaf_nodes": null,
+        "max_samples": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 2,
+        "min_samples_split": 2,
+        "min_weight_fraction_leaf": 0.0,
+        "monotonic_cst": null,
+        "n_estimators": 200,
+        "n_jobs": 2,
+        "oob_score": false,
+        "random_state": 42,
+        "verbose": 0,
+        "warm_start": false
+      }
+    },
+    {
+      "task": "classification",
+      "family": "Random Forest",
+      "score": 0.8503401360544217,
+      "parameters": {
+        "bootstrap": true,
+        "ccp_alpha": 0.0,
+        "class_weight": null,
+        "criterion": "gini",
+        "max_depth": 8,
+        "max_features": "sqrt",
+        "max_leaf_nodes": null,
+        "max_samples": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 5,
+        "min_samples_split": 2,
+        "min_weight_fraction_leaf": 0.0,
+        "monotonic_cst": null,
+        "n_estimators": 200,
+        "n_jobs": 2,
+        "oob_score": false,
+        "random_state": 42,
+        "verbose": 0,
+        "warm_start": false
+      }
+    },
+    {
+      "task": "classification",
+      "family": "Random Forest",
+      "score": 0.839041095890411,
+      "parameters": {
+        "bootstrap": true,
+        "ccp_alpha": 0.0,
+        "class_weight": null,
+        "criterion": "gini",
+        "max_depth": 16,
+        "max_features": "sqrt",
+        "max_leaf_nodes": null,
+        "max_samples": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 2,
+        "min_samples_split": 2,
+        "min_weight_fraction_leaf": 0.0,
+        "monotonic_cst": null,
+        "n_estimators": 200,
+        "n_jobs": 2,
+        "oob_score": false,
+        "random_state": 42,
+        "verbose": 0,
+        "warm_start": false
+      }
+    },
+    {
+      "task": "classification",
+      "family": "Random Forest",
+      "score": 0.8485885372112917,
+      "parameters": {
+        "bootstrap": true,
+        "ccp_alpha": 0.0,
+        "class_weight": null,
+        "criterion": "gini",
+        "max_depth": 16,
+        "max_features": "sqrt",
+        "max_leaf_nodes": null,
+        "max_samples": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 5,
+        "min_samples_split": 2,
+        "min_weight_fraction_leaf": 0.0,
+        "monotonic_cst": null,
+        "n_estimators": 200,
+        "n_jobs": 2,
+        "oob_score": false,
+        "random_state": 42,
+        "verbose": 0,
+        "warm_start": false
+      }
+    },
+    {
+      "task": "classification",
+      "family": "Random Forest",
+      "score": 0.8378839590443686,
+      "parameters": {
+        "bootstrap": true,
+        "ccp_alpha": 0.0,
+        "class_weight": null,
+        "criterion": "gini",
+        "max_depth": null,
+        "max_features": "sqrt",
+        "max_leaf_nodes": null,
+        "max_samples": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 2,
+        "min_samples_split": 2,
+        "min_weight_fraction_leaf": 0.0,
+        "monotonic_cst": null,
+        "n_estimators": 200,
+        "n_jobs": 2,
+        "oob_score": false,
+        "random_state": 42,
+        "verbose": 0,
+        "warm_start": false
+      }
+    },
+    {
+      "task": "classification",
+      "family": "Random Forest",
+      "score": 0.8485885372112917,
+      "parameters": {
+        "bootstrap": true,
+        "ccp_alpha": 0.0,
+        "class_weight": null,
+        "criterion": "gini",
+        "max_depth": null,
+        "max_features": "sqrt",
+        "max_leaf_nodes": null,
+        "max_samples": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 5,
+        "min_samples_split": 2,
+        "min_weight_fraction_leaf": 0.0,
+        "monotonic_cst": null,
+        "n_estimators": 200,
+        "n_jobs": 2,
+        "oob_score": false,
+        "random_state": 42,
+        "verbose": 0,
+        "warm_start": false
+      }
+    },
+    {
+      "task": "regression",
+      "family": "Baseline",
+      "score": -20.95842857142857,
+      "parameters": {
+        "constant": null,
+        "quantile": null,
+        "strategy": "mean"
+      }
+    },
+    {
+      "task": "regression",
+      "family": "Decision Tree",
+      "score": -9.935146737723311,
+      "parameters": {
+        "ccp_alpha": 0.0,
+        "criterion": "squared_error",
+        "max_depth": 6,
+        "max_features": null,
+        "max_leaf_nodes": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 5,
+        "min_samples_split": 2,
+        "min_weight_fraction_leaf": 0.0,
+        "monotonic_cst": null,
+        "random_state": 42,
+        "splitter": "best"
+      }
+    },
+    {
+      "task": "regression",
+      "family": "Decision Tree",
+      "score": -11.276413409140845,
+      "parameters": {
+        "ccp_alpha": 0.0,
+        "criterion": "squared_error",
+        "max_depth": 12,
+        "max_features": null,
+        "max_leaf_nodes": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 5,
+        "min_samples_split": 2,
+        "min_weight_fraction_leaf": 0.0,
+        "monotonic_cst": null,
+        "random_state": 42,
+        "splitter": "best"
+      }
+    },
+    {
+      "task": "regression",
+      "family": "Decision Tree",
+      "score": -11.613174603174603,
+      "parameters": {
+        "ccp_alpha": 0.0,
+        "criterion": "squared_error",
+        "max_depth": null,
+        "max_features": null,
+        "max_leaf_nodes": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 5,
+        "min_samples_split": 2,
+        "min_weight_fraction_leaf": 0.0,
+        "monotonic_cst": null,
+        "random_state": 42,
+        "splitter": "best"
+      }
+    },
+    {
+      "task": "regression",
+      "family": "Random Forest",
+      "score": -9.41876942024363,
+      "parameters": {
+        "bootstrap": true,
+        "ccp_alpha": 0.0,
+        "criterion": "squared_error",
+        "max_depth": 8,
+        "max_features": 1.0,
+        "max_leaf_nodes": null,
+        "max_samples": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 2,
+        "min_samples_split": 2,
+        "min_weight_fraction_leaf": 0.0,
+        "monotonic_cst": null,
+        "n_estimators": 200,
+        "n_jobs": 2,
+        "oob_score": false,
+        "random_state": 42,
+        "verbose": 0,
+        "warm_start": false
+      }
+    },
+    {
+      "task": "regression",
+      "family": "Random Forest",
+      "score": -9.341382235541495,
+      "parameters": {
+        "bootstrap": true,
+        "ccp_alpha": 0.0,
+        "criterion": "squared_error",
+        "max_depth": 8,
+        "max_features": 1.0,
+        "max_leaf_nodes": null,
+        "max_samples": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 5,
+        "min_samples_split": 2,
+        "min_weight_fraction_leaf": 0.0,
+        "monotonic_cst": null,
+        "n_estimators": 200,
+        "n_jobs": 2,
+        "oob_score": false,
+        "random_state": 42,
+        "verbose": 0,
+        "warm_start": false
+      }
+    },
+    {
+      "task": "regression",
+      "family": "Random Forest",
+      "score": -9.696429146453601,
+      "parameters": {
+        "bootstrap": true,
+        "ccp_alpha": 0.0,
+        "criterion": "squared_error",
+        "max_depth": 16,
+        "max_features": 1.0,
+        "max_leaf_nodes": null,
+        "max_samples": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 2,
+        "min_samples_split": 2,
+        "min_weight_fraction_leaf": 0.0,
+        "monotonic_cst": null,
+        "n_estimators": 200,
+        "n_jobs": 2,
+        "oob_score": false,
+        "random_state": 42,
+        "verbose": 0,
+        "warm_start": false
+      }
+    },
+    {
+      "task": "regression",
+      "family": "Random Forest",
+      "score": -9.3963571541329,
+      "parameters": {
+        "bootstrap": true,
+        "ccp_alpha": 0.0,
+        "criterion": "squared_error",
+        "max_depth": 16,
+        "max_features": 1.0,
+        "max_leaf_nodes": null,
+        "max_samples": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 5,
+        "min_samples_split": 2,
+        "min_weight_fraction_leaf": 0.0,
+        "monotonic_cst": null,
+        "n_estimators": 200,
+        "n_jobs": 2,
+        "oob_score": false,
+        "random_state": 42,
+        "verbose": 0,
+        "warm_start": false
+      }
+    },
+    {
+      "task": "regression",
+      "family": "Random Forest",
+      "score": -9.70163832190957,
+      "parameters": {
+        "bootstrap": true,
+        "ccp_alpha": 0.0,
+        "criterion": "squared_error",
+        "max_depth": null,
+        "max_features": 1.0,
+        "max_leaf_nodes": null,
+        "max_samples": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 2,
+        "min_samples_split": 2,
+        "min_weight_fraction_leaf": 0.0,
+        "monotonic_cst": null,
+        "n_estimators": 200,
+        "n_jobs": 2,
+        "oob_score": false,
+        "random_state": 42,
+        "verbose": 0,
+        "warm_start": false
+      }
+    },
+    {
+      "task": "regression",
+      "family": "Random Forest",
+      "score": -9.396285786907,
+      "parameters": {
+        "bootstrap": true,
+        "ccp_alpha": 0.0,
+        "criterion": "squared_error",
+        "max_depth": null,
+        "max_features": 1.0,
+        "max_leaf_nodes": null,
+        "max_samples": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 5,
+        "min_samples_split": 2,
+        "min_weight_fraction_leaf": 0.0,
+        "monotonic_cst": null,
+        "n_estimators": 200,
+        "n_jobs": 2,
+        "oob_score": false,
+        "random_state": 42,
+        "verbose": 0,
+        "warm_start": false
+      }
+    }
+  ],
+  "worked_examples": [
+    {
+      "origin": "HYD",
+      "destination": "BLR",
+      "departure_hour_ist": 18,
+      "day_of_week": 5,
+      "month": 10,
+      "weather": "Clear",
+      "congestion_pct": 35,
+      "incoming_delay_minutes": 10,
+      "distance_km": 456,
+      "scheduled_duration_minutes": 72,
+      "rf_probability": 0.2886573150564071,
+      "rf_class": 0,
+      "rf_minutes": 8.123504551302284,
+      "website_rule_minutes": 21,
+      "scope": "New hypothetical scenario, no observed outcome"
+    },
+    {
+      "origin": "HYD",
+      "destination": "BLR",
+      "departure_hour_ist": 18,
+      "day_of_week": 5,
+      "month": 10,
+      "weather": "Thunderstorm",
+      "congestion_pct": 85,
+      "incoming_delay_minutes": 45,
+      "distance_km": 456,
+      "scheduled_duration_minutes": 72,
+      "rf_probability": 0.9709666945296895,
+      "rf_class": 1,
+      "rf_minutes": 53.2115566622616,
+      "website_rule_minutes": 66,
+      "scope": "New hypothetical scenario, no observed outcome"
+    }
+  ],
+  "tree_example": {
+    "first_five_regression_tree_minutes": [
+      5.412698412698413,
+      7.866666666666666,
+      6.98,
+      6.3125,
+      3.1739130434782608
+    ],
+    "all_200_tree_mean_minutes": 8.123504551302288,
+    "first_five_classifier_tree_probabilities": [
+      0.32286995515695066,
+      0.3333333333333333,
+      0.9230769230769231,
+      1.0,
+      0.16216216216216217
+    ],
+    "all_200_tree_mean_probability": 0.2886573150564069
+  },
+  "encoded_feature_count": 18,
+  "dataset_unchanged": true
+}

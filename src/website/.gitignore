@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+.local/
+node_modules/
+*.log
+*.blend1
+/*.zip
+public/classroom/
+presentation/PUBLIC_LINKS.txt
+presentation/*-public-qr.*
+presentation/*-local-qr.*
+presentation/*qr-matrices.json

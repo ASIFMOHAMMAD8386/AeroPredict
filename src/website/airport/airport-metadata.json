@@ -1,0 +1,9 @@
+{
+  "airport_meshes": 14,
+  "airport_faces": 6737,
+  "parked_aircraft_per_airport": 11,
+  "runway_metres": 2300,
+  "animation_frames": 3700,
+  "fps": 30,
+  "style": "Original stylized airport; not an accurate model of a real airport layout."
+}

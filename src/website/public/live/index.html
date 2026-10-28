@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AeroPredict — Live flights</title>
+    <meta
+      name="description"
+      content="Choose a South India flight and explore its route on an interactive globe."
+    />
+    <link rel="icon" href="./favicon.svg" />
+    <link rel="stylesheet" href="./journey.css" />
+    <script type="importmap">
+      { "imports": { "three": "./vendor/three.module.js" } }
+    </script>
+    <script defer src="./vendor/qrcode.js"></script>
+    <script>
+      window.AEROPREDICT_MODE = "live";
+    </script>
+    <script type="module" src="./journey.mjs"></script>
+    <script type="module" src="./aircraft-viewer.mjs"></script>
+    <script defer src="./site-config.js"></script>
+  </head>
+  <body data-mode="live">
+    <header>
+      <a class="brand" href="./"
+        >✦ <span>AeroPredict<small>SOUTH INDIA FLIGHT EXPLORER</small></span></a
+      >
+      <nav aria-label="Project mode">
+        <a id="simulation-link" href="./">Simulation</a
+        ><a id="live-link" href="/live/">Live flights</a>
+      </nav>
+      <button id="share" class="quiet">Share QR ↗</button>
+    </header>
+    <main id="choose">
+      <div class="intro">
+        <div class="mode-badge">LIVE FLIGHTS · PROVIDER DATA</div>
+        <span class="eyebrow">REAL FLIGHTS · AVIATIONSTACK</span>
+        <h1>Live flight tracker.<br /><em>Know your departure.</em></h1>
+        <p>
+          Find a Hyderabad departure. Open its route, schedule and
+          airline-reported delay on the globe.
+        </p>
+        <div
+          id="aircraft-preview"
+          role="img"
+          aria-label="Interactive Blender aircraft model. Drag to rotate."
+        ></div>
+        <p class="preview-caption">
+          Drag to rotate · Double-click to reset · New Blender airliner
+        </p>
+      </div>
+      <section class="picker" aria-label="Choose your flight">
+        <div class="step">01 / CHOOSE A FLIGHT</div>
+        <h2>Departures from Hyderabad</h2>
+        <button class="primary" id="fetch">Load live flights ↗</button>
+        <p id="connection" role="status">Checking connection…</p>
+        <label
+          >Choose a flight<select id="flight" disabled>
+            <option>Load flights to begin</option>
+          </select></label
+        >
+        <p id="freshness"></p>
+        <button id="start" class="primary" disabled>
+          Open flight on globe →
+        </button>
+        <p id="budget" role="status">Checking website request budget…</p>
+        <p class="fine">
+          Manual refresh · Shared five-minute cache · Stops at 100 website
+          requests. No automatic reset.
+        </p>
+        <p class="fine">
+          Real schedule and reported status. Delay predictions are available in
+          Simulation.
+        </p>
+        <p id="error" role="alert"></p>
+      </section>
+      <div class="promise">
+        <span>01 &nbsp; Choose your flight</span
+        ><span>02 &nbsp; Open the route</span
+        ><span>03 &nbsp; Explore the globe</span>
+      </div>
+    </main>
+    <main id="result" hidden>
+      <div class="result-top">
+        <button id="back" class="quiet">← Choose another flight</button
+        ><span class="eyebrow">LIVE FLIGHT DETAILS</span><div class="presentation-actions"><button id="inspect-aircraft" class="quiet">Inspect aircraft</button><button id="present" class="quiet">Present to class</button></div>
+      </div>
+      <div class="experience">
+        <section class="globe-panel" aria-label="Interactive world globe">
+          <div class="route-title">
+            <span id="flight-name"></span>
+            <h2 id="route-name"></h2>
+            <p id="route-time"></p>
+            <div id="route-kind" class="route-kind"></div>
+          </div>
+            <div class="view-presets" role="group" aria-label="Camera angle">
+              <button id="view-top" aria-pressed="true">Top view</button>
+              <button id="view-side" aria-pressed="false">Side view</button>
+              <button id="view-along" aria-pressed="false">Along route</button>
+              <button id="view-follow" aria-pressed="false">Follow aircraft</button><button id="world" aria-pressed="false">World view</button>
+              <button id="reset">Reset view</button>
+            </div>
+          <div id="globe"></div>
+          <div id="journey-playback" class="journey-playback">
+            <div class="playback-heading"><strong id="journey-state">Demo flight</strong><span id="journey-progress">0% of route</span></div>
+            <label class="sr-only" for="journey-timeline">Simulated journey progress</label><input id="journey-timeline" type="range" min="0" max="100" step="0.1" value="0" />
+            <div class="playback-buttons"><button id="pause">Pause animation</button><button id="restart-flight">Restart flight</button><label for="journey-speed">Demo speed</label><select id="journey-speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select><span class="route-legend">Bright path: travelled in demo · Faint path: remaining</span></div>
+          </div>
+          <span class="orbit-hint">Drag to orbit · Scroll or pinch to zoom · R to reset</span>
+          <div class="globe-tools" aria-label="Route viewing controls">
+            <div class="zoom-controls">
+              <button id="zoom-out" aria-label="Zoom out">−</button>
+              <label for="zoom-level">Zoom</label><input id="zoom-level" type="range" min="0" max="100" step="1" value="50" aria-label="Route zoom" />
+              <button id="zoom-in" aria-label="Zoom in">+</button><output id="zoom-readout" for="zoom-level">1×</output>
+            </div>
+            <div class="rotation-controls" role="group" aria-label="Rotate viewpoint">
+              <button id="rotate-left" aria-label="Rotate viewpoint left">←</button>
+              <button id="rotate-right" aria-label="Rotate viewpoint right">→</button>
+              <button id="rotate-up" aria-label="Tilt viewpoint up">↑</button>
+              <button id="rotate-down" aria-label="Tilt viewpoint down">↓</button>
+              <span id="view-name" aria-live="polite">Top view</span>
+              
+            </div>
+          </div>
+          <p class="map-caption" id="position-caption"></p>
+        </section>
+        <aside class="result-card">
+          <span class="eyebrow" id="metric-label"></span>
+          <div class="metric" id="metric"></div>
+          <div id="risk"></div>
+          <p id="explanation"></p>
+          <dl id="details"></dl>
+          <div class="note" id="model-note"></div>
+          <button class="quiet" id="refresh">Refresh flight data ↻</button>
+          <p id="result-status" role="status"></p>
+        </aside>
+      </div>
+    </main>
+    <footer>
+      <div class="downloads">
+        <a href="./data/south_india_synthetic_all.csv" download
+          >Training CSV · synthetic</a
+        ><a href="./data/AeroPredict_Training_Data.zip" download
+          >Train / validation / test</a
+        >
+      </div>
+      <span>Hyderabad connects the south.</span
+      ><span>HYD · BLR · MAA · VGA · VTZ · TIR · TRV</span>
+    </footer>
+    <dialog id="aircraft-dialog" class="aircraft-dialog">
+      <div class="aircraft-dialog-top"><div><span class="eyebrow">AIRCRAFT INSPECTION</span><h2>The AeroPredict airliner</h2></div><button id="close-aircraft" class="quiet">Close ×</button></div>
+      <div id="aircraft-inspect" class="aircraft-stage" role="img" aria-label="Large interactive airliner model. Drag to rotate."></div>
+      <p>Drag to rotate · Double-click to reset · Illustrative Blender model, enlarged for inspection</p>
+    </dialog>
+    <dialog id="qr-dialog">
+      <button id="close-qr" class="quiet">Close ×</button>
+      <h2>Take the flight explorer with you.</h2>
+      <div id="qr"></div>
+      <p id="share-url"></p>
+      <a id="open-url">Open website ↗</a>
+    </dialog>
+  </body>
+</html>

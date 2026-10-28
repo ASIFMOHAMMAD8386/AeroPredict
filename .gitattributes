@@ -1,0 +1,7 @@
+* -text
+*.csv -text
+*.joblib binary
+*.glb binary
+*.blend binary
+*.pptx binary
+*.docx binary

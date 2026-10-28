@@ -1,0 +1,35 @@
+{
+  "source_type": "synthetic educational data",
+  "real_airline_records": false,
+  "provider_data_used_for_training": false,
+  "seed": 20261019,
+  "rows": 6000,
+  "features": [
+    "origin",
+    "destination",
+    "departure_hour_ist",
+    "day_of_week",
+    "month",
+    "weather",
+    "congestion_pct",
+    "incoming_delay_minutes",
+    "distance_km",
+    "scheduled_duration_minutes"
+  ],
+  "targets": [
+    "delayed_15_plus",
+    "departure_delay_minutes"
+  ],
+  "split_policy": "Original chronological train/validation/test: 4200/900/900; no date overlap.",
+  "original_generator": "src/data/original_generator_reference.mjs",
+  "portable_generator": "src/data/generate_dataset.mjs",
+  "preprocessing": "Training-only one-hot encoding of origin, destination and weather; seven numeric features pass through. The fitted transformer is inside both model pipelines.",
+  "processed_dataset": "No separate processed CSV existed in the original study. Original CSVs are included unchanged; encoding runs inside the saved pipelines.",
+  "sha256": {
+    "train.csv": "83bd05093396d08cad987da228b72bfde02ab3cce59d16df422f1277626d3afa",
+    "validation.csv": "227dac070515594935d387fedfa3ccd41000079beef2ba18728cd93b05de3b11",
+    "test.csv": "df82b04cf46b4e1522fdfd722a1431fb206af86d16480dcc6e98c98d6745f209",
+    "south_india_synthetic_all.csv": "6d36c3ac835875c7b8daef4602c52e005a5fccd996419c7550649674c5d64106",
+    "metadata.json": "024a754c9c3b19ac3b565a60d3423af3898d88ad526873be82c74b4425e8ee56"
+  }
+}

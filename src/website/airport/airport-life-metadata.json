@@ -1,0 +1,17 @@
+{
+  "crew_members": 18,
+  "background_runway_x": -240,
+  "background_runway_metres": 2800,
+  "prototype_names": [
+    "CrewPrototype",
+    "TractorPrototype",
+    "BaggageCartPrototype",
+    "BusPrototype",
+    "FollowMePrototype",
+    "CateringPrototype",
+    "BeltLoaderPrototype",
+    "SuitcasePrototype",
+    "BackgroundJetPrototype"
+  ],
+  "style": "Original illustrative airport; all traffic and activity are simulated."
+}

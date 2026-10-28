@@ -1,0 +1,434 @@
+{
+  "scope": "Synthetic educational data only; models are separate from the website rule engine",
+  "seed": 42,
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "pandas": "3.0.1",
+    "learner_implementation": "NumPy teaching implementation",
+    "matplotlib": "3.11.2"
+  },
+  "features": [
+    "destination",
+    "weather",
+    "departure_hour_ist",
+    "day_of_week",
+    "month",
+    "congestion_pct",
+    "incoming_delay_minutes",
+    "distance_km",
+    "scheduled_duration_minutes",
+    "evening_peak"
+  ],
+  "splits": {
+    "train": {
+      "rows": 4200,
+      "start": "2025-01-01",
+      "end": "2025-07-29",
+      "delayed": 2634,
+      "on_time": 1566,
+      "sha256": "83bd05093396d08cad987da228b72bfde02ab3cce59d16df422f1277626d3afa"
+    },
+    "validation": {
+      "rows": 900,
+      "start": "2025-07-30",
+      "end": "2025-09-12",
+      "delayed": 593,
+      "on_time": 307,
+      "sha256": "227dac070515594935d387fedfa3ccd41000079beef2ba18728cd93b05de3b11"
+    },
+    "test": {
+      "rows": 900,
+      "start": "2025-09-13",
+      "end": "2025-10-27",
+      "delayed": 597,
+      "on_time": 303,
+      "sha256": "df82b04cf46b4e1522fdfd722a1431fb206af86d16480dcc6e98c98d6745f209"
+    }
+  },
+  "classification": [
+    {
+      "model": "Majority baseline",
+      "validation_score": 0.7943737441393168,
+      "accuracy": 0.6633333333333333,
+      "precision": 0.6633333333333333,
+      "recall": 1.0,
+      "f1": 0.7975951903807615,
+      "roc_auc": 0.5,
+      "confusion_matrix": [
+        [
+          0,
+          303
+        ],
+        [
+          0,
+          597
+        ]
+      ],
+      "parameters": {
+        "kind": "majority"
+      }
+    },
+    {
+      "model": "Logistic regression",
+      "validation_score": 0.8539518900343642,
+      "accuracy": 0.8222222222222222,
+      "precision": 0.8880994671403197,
+      "recall": 0.8375209380234506,
+      "f1": 0.8620689655172413,
+      "roc_auc": 0.9123284187715254,
+      "confusion_matrix": [
+        [
+          240,
+          63
+        ],
+        [
+          97,
+          500
+        ]
+      ],
+      "parameters": {
+        "kind": "logistic",
+        "l2": 0.01
+      }
+    },
+    {
+      "model": "Gaussian naive Bayes",
+      "validation_score": 0.7852283770651117,
+      "accuracy": 0.7544444444444445,
+      "precision": 0.9563106796116505,
+      "recall": 0.6599664991624791,
+      "f1": 0.7809712586719524,
+      "roc_auc": 0.8955780000110564,
+      "confusion_matrix": [
+        [
+          285,
+          18
+        ],
+        [
+          203,
+          394
+        ]
+      ],
+      "parameters": {
+        "kind": "gaussian",
+        "smoothing": 0.001
+      }
+    },
+    {
+      "model": "K nearest neighbours",
+      "validation_score": 0.8134394341290893,
+      "accuracy": 0.7588888888888888,
+      "precision": 0.8454545454545455,
+      "recall": 0.7788944723618091,
+      "f1": 0.8108108108108109,
+      "roc_auc": 0.8384828432592003,
+      "confusion_matrix": [
+        [
+          218,
+          85
+        ],
+        [
+          132,
+          465
+        ]
+      ],
+      "parameters": {
+        "kind": "knn_class",
+        "k": 11
+      }
+    }
+  ],
+  "regression": [
+    {
+      "model": "Mean baseline",
+      "validation_score": -20.95842857142857,
+      "mae": 21.82766666666667,
+      "mse": 713.8556723356008,
+      "rmse": 26.718077631738417,
+      "r2": -0.0007383146013779651,
+      "parameters": {
+        "kind": "mean"
+      }
+    },
+    {
+      "model": "Ridge regression",
+      "validation_score": -8.846453727443626,
+      "mae": 8.701935238326751,
+      "mse": 158.24175063454035,
+      "rmse": 12.579417738295376,
+      "r2": 0.7781644259945962,
+      "parameters": {
+        "kind": "ridge",
+        "alpha": 10
+      }
+    },
+    {
+      "model": "K nearest neighbours",
+      "validation_score": -10.6231541218638,
+      "mae": 11.015412186379928,
+      "mse": 227.86453231587467,
+      "rmse": 15.095182420755128,
+      "r2": 0.6805618042073694,
+      "parameters": {
+        "kind": "knn_reg",
+        "k": 31
+      }
+    }
+  ],
+  "search": {
+    "classification": [
+      {
+        "family": "Majority baseline",
+        "validation_selection_score": 0.7943737441393168,
+        "params": {
+          "kind": "majority"
+        }
+      },
+      {
+        "family": "Logistic regression",
+        "validation_selection_score": 0.853195164075993,
+        "params": {
+          "kind": "logistic",
+          "l2": 0.001
+        }
+      },
+      {
+        "family": "Logistic regression",
+        "validation_selection_score": 0.8539518900343642,
+        "params": {
+          "kind": "logistic",
+          "l2": 0.01
+        }
+      },
+      {
+        "family": "Logistic regression",
+        "validation_selection_score": 0.843042071197411,
+        "params": {
+          "kind": "logistic",
+          "l2": 0.1
+        }
+      },
+      {
+        "family": "Gaussian naive Bayes",
+        "validation_selection_score": 0.7852283770651117,
+        "params": {
+          "kind": "gaussian",
+          "smoothing": 0.001
+        }
+      },
+      {
+        "family": "Gaussian naive Bayes",
+        "validation_selection_score": 0.783625730994152,
+        "params": {
+          "kind": "gaussian",
+          "smoothing": 0.01
+        }
+      },
+      {
+        "family": "Gaussian naive Bayes",
+        "validation_selection_score": 0.7732267732267732,
+        "params": {
+          "kind": "gaussian",
+          "smoothing": 0.1
+        }
+      },
+      {
+        "family": "K nearest neighbours",
+        "validation_selection_score": 0.8134394341290893,
+        "params": {
+          "kind": "knn_class",
+          "k": 11
+        }
+      },
+      {
+        "family": "K nearest neighbours",
+        "validation_selection_score": 0.798932384341637,
+        "params": {
+          "kind": "knn_class",
+          "k": 31
+        }
+      },
+      {
+        "family": "K nearest neighbours",
+        "validation_selection_score": 0.806049822064057,
+        "params": {
+          "kind": "knn_class",
+          "k": 61
+        }
+      }
+    ],
+    "regression": [
+      {
+        "family": "Mean baseline",
+        "validation_selection_score": -20.95842857142857,
+        "params": {
+          "kind": "mean"
+        }
+      },
+      {
+        "family": "Ridge regression",
+        "validation_selection_score": -8.847624514400872,
+        "params": {
+          "kind": "ridge",
+          "alpha": 0.1
+        }
+      },
+      {
+        "family": "Ridge regression",
+        "validation_selection_score": -8.847507086994803,
+        "params": {
+          "kind": "ridge",
+          "alpha": 1
+        }
+      },
+      {
+        "family": "Ridge regression",
+        "validation_selection_score": -8.846453727443626,
+        "params": {
+          "kind": "ridge",
+          "alpha": 10
+        }
+      },
+      {
+        "family": "K nearest neighbours",
+        "validation_selection_score": -10.69959595959596,
+        "params": {
+          "kind": "knn_reg",
+          "k": 11
+        }
+      },
+      {
+        "family": "K nearest neighbours",
+        "validation_selection_score": -10.6231541218638,
+        "params": {
+          "kind": "knn_reg",
+          "k": 31
+        }
+      },
+      {
+        "family": "K nearest neighbours",
+        "validation_selection_score": -11.072805100182148,
+        "params": {
+          "kind": "knn_reg",
+          "k": 61
+        }
+      }
+    ]
+  },
+  "data_summary": {
+    "rows": 6000,
+    "missing_cells": 0,
+    "duplicate_ids": 0,
+    "delayed": 3824,
+    "mean_delay": 30.246833333333335,
+    "median_delay": 22.0,
+    "max_delay": 157,
+    "destinations": {
+      "TRV": 1059,
+      "VGA": 1051,
+      "MAA": 1012,
+      "VTZ": 971,
+      "TIR": 956,
+      "BLR": 951
+    }
+  },
+  "classification_selected": "Logistic regression",
+  "regression_selected": "Ridge regression",
+  "permutation_importance": [
+    {
+      "feature": "destination",
+      "mean": 0.0014156740585513222,
+      "std": 0.001158132935668968
+    },
+    {
+      "feature": "weather",
+      "mean": 0.06139997293384683,
+      "std": 0.005374690724611553
+    },
+    {
+      "feature": "departure_hour_ist",
+      "mean": 0.0008713804966320599,
+      "std": 0.001286726619995374
+    },
+    {
+      "feature": "day_of_week",
+      "mean": 0.0027120208578415295,
+      "std": 0.0022651801572797056
+    },
+    {
+      "feature": "month",
+      "mean": -0.0002753499215502053,
+      "std": 0.0003554752201811547
+    },
+    {
+      "feature": "congestion_pct",
+      "mean": 0.02546812572581819,
+      "std": 0.003711600584317169
+    },
+    {
+      "feature": "incoming_delay_minutes",
+      "mean": 0.15621987938915377,
+      "std": 0.00935830230773891
+    },
+    {
+      "feature": "distance_km",
+      "mean": 0.0030436035450235877,
+      "std": 0.0011252967960687324
+    },
+    {
+      "feature": "scheduled_duration_minutes",
+      "mean": 0.0017221458976569848,
+      "std": 0.0008341484766125377
+    },
+    {
+      "feature": "evening_peak",
+      "mean": 0.014906611064896935,
+      "std": 0.007664368028204037
+    }
+  ],
+  "new_examples": [
+    {
+      "destination": "BLR",
+      "weather": "Clear",
+      "departure_hour_ist": 10,
+      "day_of_week": 5,
+      "month": 10,
+      "congestion_pct": 25,
+      "incoming_delay_minutes": 0,
+      "distance_km": 456,
+      "scheduled_duration_minutes": 72,
+      "probability": 0.13473781821961595,
+      "predicted_class": 0,
+      "predicted_minutes": 0.09599356328981701
+    },
+    {
+      "destination": "BLR",
+      "weather": "Rain",
+      "departure_hour_ist": 18,
+      "day_of_week": 5,
+      "month": 10,
+      "congestion_pct": 60,
+      "incoming_delay_minutes": 20,
+      "distance_km": 456,
+      "scheduled_duration_minutes": 72,
+      "probability": 0.7736172703333566,
+      "predicted_class": 1,
+      "predicted_minutes": 29.208174258308382
+    },
+    {
+      "destination": "BLR",
+      "weather": "Thunderstorm",
+      "departure_hour_ist": 18,
+      "day_of_week": 5,
+      "month": 10,
+      "congestion_pct": 85,
+      "incoming_delay_minutes": 45,
+      "distance_km": 456,
+      "scheduled_duration_minutes": 72,
+      "probability": 0.9776383878756745,
+      "predicted_class": 1,
+      "predicted_minutes": 54.18168357826516
+    }
+  ]
+}

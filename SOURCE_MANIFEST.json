@@ -1,0 +1,955 @@
+{
+  "scope": "Copied source and submitted artifacts. Generated organization helpers are described in README.md.",
+  "files": [
+    {
+      "source": "outputs/AeroPredict_RandomForest_Study/data/metadata.json",
+      "destination": "dataset/metadata.json",
+      "sha256": "024a754c9c3b19ac3b565a60d3423af3898d88ad526873be82c74b4425e8ee56"
+    },
+    {
+      "source": "outputs/AeroPredict_RandomForest_Study/data/README.md",
+      "destination": "dataset/README.md",
+      "sha256": "fe1282b516381405712885f849f7ef38a952e5af0d5c0f587626b4772240543c"
+    },
+    {
+      "source": "outputs/AeroPredict_RandomForest_Study/data/test.csv",
+      "destination": "dataset/test.csv",
+      "sha256": "df82b04cf46b4e1522fdfd722a1431fb206af86d16480dcc6e98c98d6745f209"
+    },
+    {
+      "source": "outputs/AeroPredict_RandomForest_Study/data/train.csv",
+      "destination": "dataset/train.csv",
+      "sha256": "83bd05093396d08cad987da228b72bfde02ab3cce59d16df422f1277626d3afa"
+    },
+    {
+      "source": "outputs/AeroPredict_RandomForest_Study/data/validation.csv",
+      "destination": "dataset/validation.csv",
+      "sha256": "227dac070515594935d387fedfa3ccd41000079beef2ba18728cd93b05de3b11"
+    },
+    {
+      "source": "outputs/training-data/south_india_synthetic_all.csv",
+      "destination": "dataset/south_india_synthetic_all.csv",
+      "sha256": "6d36c3ac835875c7b8daef4602c52e005a5fccd996419c7550649674c5d64106"
+    },
+    {
+      "source": "outputs/AeroPredict_RandomForest_Study/random_forest_classification.joblib",
+      "destination": "models/random_forest_classification.joblib",
+      "sha256": "dc13ac4a37280b151c86a4d792dce37aa051278f6801acf5e497c12fa39b1503"
+    },
+    {
+      "source": "outputs/AeroPredict_RandomForest_Study/random_forest_regression.joblib",
+      "destination": "models/random_forest_regression.joblib",
+      "sha256": "78cb2a9d24a15540805a16523e36f5eaa4fd535324ef799211b033b9b8797e61"
+    },
+    {
+      "source": "outputs/AeroPredict_RandomForest_Study/metrics.json",
+      "destination": "results/metrics.json",
+      "sha256": "5492722856ca65b39af8f116a73021375dd1cdf1616f1b17a912aa7695bc069f"
+    },
+    {
+      "source": "outputs/AeroPredict_RandomForest_Study/comparison.csv",
+      "destination": "results/comparison.csv",
+      "sha256": "b5b03cd5a2a77a163083051fe8898991d45e1b9f063b762dfe276055c6c481c0"
+    },
+    {
+      "source": "outputs/AeroPredict_RandomForest_Study/test_predictions.csv",
+      "destination": "results/test_predictions.csv",
+      "sha256": "f26fd13ae41060fa37e8b6fcc3836fb9a3ea5ee22afd9f99c80bfa8fa00afe5d"
+    },
+    {
+      "source": "outputs/AeroPredict_RandomForest_Study/worked_examples.csv",
+      "destination": "results/worked_examples.csv",
+      "sha256": "47523f3664f1b45a0ae39d2fba084295745cb7553b49764d128f78f49aeb1dba"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/.env.example",
+      "destination": "src/website/.env.example",
+      "sha256": "b2bc6dd1bb2f5084a4825f02b4dd17232ea5a49198fcf9398d9ed58bbaf3f1a2"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/.gitignore",
+      "destination": "src/website/.gitignore",
+      "sha256": "06941a6c57333e7c623fffbef848f7173bfc2d45051c0c6d9296b5d5b1e91eeb"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/CODE_INDEX.md",
+      "destination": "src/website/CODE_INDEX.md",
+      "sha256": "8499f70acc928075a638d5cc922edf8213e7404a6c163ffc0e88635c9255945a"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/configure-key.mjs",
+      "destination": "src/website/configure-key.mjs",
+      "sha256": "a69299c673a0917120f39e98155d6ba0b321aa03f10c3c7161486dce97799254"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/generate-qr.mjs",
+      "destination": "src/website/generate-qr.mjs",
+      "sha256": "b376377211f973a226f1676745439178a22dc5968ec79903b52e567dc8c00611"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/GITHUB_UPLOAD.md",
+      "destination": "src/website/GITHUB_UPLOAD.md",
+      "sha256": "29f357be1ade8dc2e9a8c88db830811d8e63a3088abc82a8abcfd14054b89e29"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/launch.mjs",
+      "destination": "src/website/launch.mjs",
+      "sha256": "0f2878134152c54054879e0cc77c8723ea5bdd51ff7f367bf2796644d8394375"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/package.json",
+      "destination": "src/website/package.json",
+      "sha256": "4d55c792fa2282b2624eeef9a6c4f04df0caeb76b5a587bd23f8ad03153abbce"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/PRESENTATION_NOTES.md",
+      "destination": "src/website/PRESENTATION_NOTES.md",
+      "sha256": "c1043758c2db9f2a6c991f1fedeb6f024bd8ddb7d6db41b0deb51ecdab18c704"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public-share.mjs",
+      "destination": "src/website/public-share.mjs",
+      "sha256": "081bc08e47d9a79fee93bc0dabfa0853e86dddd35117f47a1eecf1ab160657b7"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public-stop.mjs",
+      "destination": "src/website/public-stop.mjs",
+      "sha256": "26753de3d81573762907ac1597dc0ba8217a33af30b9640be4ecb1ffe4926763"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/README.md",
+      "destination": "src/website/README.md",
+      "sha256": "ec742ba7cca1b4e96d951a9284f5de17e886db0610e7c9cd1056d8a8f14526e6"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/READ_ME_FIRST.txt",
+      "destination": "src/website/READ_ME_FIRST.txt",
+      "sha256": "0fa1c47756f1d464e8cfb11385f629de55339ecc9b94f6fe3ca528e3e474dc1d"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/server.mjs",
+      "destination": "src/website/server.mjs",
+      "sha256": "d803677b03ffd9852ce8765a304ed72d43b7f58df861590c11ae42cd102803e6"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/SET_API_KEY.cmd",
+      "destination": "src/website/SET_API_KEY.cmd",
+      "sha256": "cf7fb9c465aa37ab5e777feabb892df59cb064392593a31462bc94d1344cc5eb"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/start-here.mjs",
+      "destination": "src/website/start-here.mjs",
+      "sha256": "67085a501fe80e4f548a5d6f658053e526fc120c6101a654390bff50beda5cfb"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/START_HERE.cmd",
+      "destination": "src/website/START_HERE.cmd",
+      "sha256": "23a86053ef9d3bc15112d13cdf6112fd5f62da1e77ddf0288974c860fd79951f"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/START_LOCAL.cmd",
+      "destination": "src/website/START_LOCAL.cmd",
+      "sha256": "59d1f0f507d8876dd55365b19b5ae5783dc89e00989a4ce26eac3daf54372566"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/START_PUBLIC.cmd",
+      "destination": "src/website/START_PUBLIC.cmd",
+      "sha256": "d3eb98b534b5be70d521be688001720fee62a9c68b2d90fc437113e38b6a3ad0"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/stop.mjs",
+      "destination": "src/website/stop.mjs",
+      "sha256": "049eff1d059d1e58861aae908271dece5761e722e9ffcb59504f66068b3d4a0e"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/STOP_HERE.cmd",
+      "destination": "src/website/STOP_HERE.cmd",
+      "sha256": "0afc947bd61cdee13d11071fdf1ee0a87fc129e553a77ccac6a3898dde8e9d47"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/STOP_LOCAL.cmd",
+      "destination": "src/website/STOP_LOCAL.cmd",
+      "sha256": "e936af539fabf4beeac5913fbaab79220fd0492016b104de01ee6d9f0b5f1e81"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/STOP_PUBLIC.cmd",
+      "destination": "src/website/STOP_PUBLIC.cmd",
+      "sha256": "ca52284163dd8e0b7d5afc688d2686018d11844a21d87f8cf8e033ab40b0ac1e"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/aircraft/aeropredict-airliner-v2.blend",
+      "destination": "src/website/aircraft/aeropredict-airliner-v2.blend",
+      "sha256": "c73f3357612deb09a050c578db2c8756fc0993b16bfd4b0112f97912e27f2d01"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/aircraft/aeropredict-airliner-v2.glb",
+      "destination": "src/website/aircraft/aeropredict-airliner-v2.glb",
+      "sha256": "625edc2e10fec1b24b60978ed8cfd94992631d003c43b28b7bb667fd5d18a428"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/aircraft/aeropredict-airliner.blend",
+      "destination": "src/website/aircraft/aeropredict-airliner.blend",
+      "sha256": "c5bd7cdcfdd05745e6329a0a45657144bb193ffd9a299787e28fd7fd24c3349b"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/aircraft/aeropredict-airliner.glb",
+      "destination": "src/website/aircraft/aeropredict-airliner.glb",
+      "sha256": "5b023ad75031d75d25f8f4ecd8be2dcad83cf7653984f23256c91f23270caaf2"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/aircraft/aircraft-render.png",
+      "destination": "src/website/aircraft/aircraft-render.png",
+      "sha256": "9787c9892db1a5f4186953bb48c0262354cb7c0d965c317b9a7fa99710bea521"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/aircraft/aircraft-v2-metadata.json",
+      "destination": "src/website/aircraft/aircraft-v2-metadata.json",
+      "sha256": "37badae597eb1417972bedd05f859be52748dce75c8a8d6d4e6ed2913ef0b9f2"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/aircraft/aircraft-v2-render.png",
+      "destination": "src/website/aircraft/aircraft-v2-render.png",
+      "sha256": "60841ccc6bb1fb02d4cd2cff75ae9fde225833025087a6f47f8a6d97b27dd7ea"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/aircraft/create-aircraft-v2.py",
+      "destination": "src/website/aircraft/create-aircraft-v2.py",
+      "sha256": "342e4a4dfb394be4a37e62d7789c22878a3c5f43eab46ff4b58ff07561549a8a"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/aircraft/create-aircraft.py",
+      "destination": "src/website/aircraft/create-aircraft.py",
+      "sha256": "d709ecff3e4207c647dfc776ff1c617e51d3a0f9639d9c1af86b5b815d369f71"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/aircraft/README.md",
+      "destination": "src/website/aircraft/README.md",
+      "sha256": "ff1ca146c3b7b2d252262139aa521219838c71f90410635ee69dde9433509bbd"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/airport/add-apron-details.py",
+      "destination": "src/website/airport/add-apron-details.py",
+      "sha256": "0d88d3b7045d84b83c3eab83f36f8aee5c49313fe1fefa1434ba82e8def3e8ab"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/airport/add-arrival-unloading.py",
+      "destination": "src/website/airport/add-arrival-unloading.py",
+      "sha256": "d108fe3019d7a1316d3da1c4d501ac76b4b04463343d03ffab14cc7f755888ed"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/airport/add-takeoff-shot.py",
+      "destination": "src/website/airport/add-takeoff-shot.py",
+      "sha256": "07735a7fa2f610e9b9114ca71d68be3b7cbc911e3c36df2c5dcb87b48b7902b7"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/airport/aeropredict-airport-activity.glb",
+      "destination": "src/website/airport/aeropredict-airport-activity.glb",
+      "sha256": "e6d0ca291648439a9246230fcaba8971ba4cd1eee67b18c4f199182dee713266"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/airport/aeropredict-airport-airliner.glb",
+      "destination": "src/website/airport/aeropredict-airport-airliner.glb",
+      "sha256": "69dd171b6492b7d08732b3fcc5d06e87ca7c75b8ffd48acdac9ae753e44a0bd8"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/airport/aeropredict-airport-flight.blend",
+      "destination": "src/website/airport/aeropredict-airport-flight.blend",
+      "sha256": "5d0f950877b6e03fbc454532cd0e326106fe345d92e72f4341a56bacc2e4a662"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/airport/aeropredict-airport-living.blend",
+      "destination": "src/website/airport/aeropredict-airport-living.blend",
+      "sha256": "40cde80a4aa9215e7bc0ced8eed31ea8870704d83239912ae7113a4abe629423"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/airport/aeropredict-airport-v2.glb",
+      "destination": "src/website/airport/aeropredict-airport-v2.glb",
+      "sha256": "116deb5f5f0f9ebb93baee43a495aca371d9366375ac7a7080f4d0b9c222bf2c"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/airport/aeropredict-airport.glb",
+      "destination": "src/website/airport/aeropredict-airport.glb",
+      "sha256": "7b587f397c4b5eb054e970924ed4acb77bf50ab529b767da152ff8df626d8570"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/airport/aeropredict-weather.blend",
+      "destination": "src/website/airport/aeropredict-weather.blend",
+      "sha256": "4b969f150dafc4f4a78a521ede86b4995e8e573ee30770c1161b26911019bae0"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/airport/airport-aircraft.png",
+      "destination": "src/website/airport/airport-aircraft.png",
+      "sha256": "260598f20bac6af113c5b01f45f780fce92e4ec41093ea33b269f2050d2ee61a"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/airport/airport-flight-camera.png",
+      "destination": "src/website/airport/airport-flight-camera.png",
+      "sha256": "1d3be72ffea997153b98362c7e6ac361898c1c5e5a3845a9d2295b557df5eb5a"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/airport/airport-life-crew.png",
+      "destination": "src/website/airport/airport-life-crew.png",
+      "sha256": "67749301b02d1cb39e7b1195e295320f2f69533156f95ea56770f4e8b50d650f"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/airport/airport-life-metadata.json",
+      "destination": "src/website/airport/airport-life-metadata.json",
+      "sha256": "5c94bc4bf7b99225a222caa68ebaf6cb8eb16d44bfcfa593c9ca79d4da1da21e"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/airport/airport-metadata.json",
+      "destination": "src/website/airport/airport-metadata.json",
+      "sha256": "95532b2f4a39c3ffd99d458362180736e8efcd526d76c1cbdb274e20fa2a33b8"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/airport/airport-overview.png",
+      "destination": "src/website/airport/airport-overview.png",
+      "sha256": "be1c374ac569261cb24f99e875fc641173470efc7eb103697ad8bdf7ff592181"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/airport/airport-takeoff-shot.png",
+      "destination": "src/website/airport/airport-takeoff-shot.png",
+      "sha256": "09f8319dceab19bff29788c316a3ad82622db6f9ec597c03d6d911211942d623"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/airport/animate-airport-life.py",
+      "destination": "src/website/airport/animate-airport-life.py",
+      "sha256": "11c949915dac574fdac79c90bcb659855556e2afeac984d72000dbedbd8bdfa4"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/airport/create-airport-life.py",
+      "destination": "src/website/airport/create-airport-life.py",
+      "sha256": "bad773c2c416e627b41928fad28ca66c3d76845983de1fbf58eb30e03efb9918"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/airport/create-airport.py",
+      "destination": "src/website/airport/create-airport.py",
+      "sha256": "6044d53b4292ba326964389060a46331acceddefd518f73b902c84abbffaed5d"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/airport/create-weather.py",
+      "destination": "src/website/airport/create-weather.py",
+      "sha256": "9c65ece4f62eddce3afb1098ab7fe727321f78d1c0970dc2a4fb66d251c08b30"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/airport/depth-surface-fix.json",
+      "destination": "src/website/airport/depth-surface-fix.json",
+      "sha256": "92dfa33d942ce651852361f9e2ca6c7c77edc1badbc15dbca2a1a60f384bbf84"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/airport/fix-depth-surfaces.py",
+      "destination": "src/website/airport/fix-depth-surfaces.py",
+      "sha256": "6f17b147497f486bdbdcea8bb37198d5591cad88d46461829c971f8667c769e8"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/airport/README.md",
+      "destination": "src/website/airport/README.md",
+      "sha256": "6346188aeef4a4d794facb47e84c629b2779dbd88ac2387b7f6778a11b68cedd"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/airport/weather-metadata.json",
+      "destination": "src/website/airport/weather-metadata.json",
+      "sha256": "e4a9deb6d0c29df124d3b9000deda8b1d2107d0ce3b6e03941c965d513d47d62"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/presentation/aircraft-inspection.png",
+      "destination": "src/website/presentation/aircraft-inspection.png",
+      "sha256": "22b709a2240d6d806bef6cf948505998bafd45043d322dfbeb076a395604386f"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/presentation/airport-classroom.png",
+      "destination": "src/website/presentation/airport-classroom.png",
+      "sha256": "8906b94882567b07fca954ddd791a43a1aab4abb9bac55ae3c2471f816767d26"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/presentation/airport-fog-final.png",
+      "destination": "src/website/presentation/airport-fog-final.png",
+      "sha256": "484678b17cef8c04bfd4443531e874178e16e232f3457570d30b0f94a4e9655f"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/presentation/airport-rain-final.png",
+      "destination": "src/website/presentation/airport-rain-final.png",
+      "sha256": "77b266478d2c32839700681aa62c8ec0bfcb7bd59dea60c723420b7fb0fbbc48"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/presentation/airport-smooth-transition.png",
+      "destination": "src/website/presentation/airport-smooth-transition.png",
+      "sha256": "e9a82c61613f1dbc21f7e7f20c5a51d468a5bb5a1e2ce23c653312f054a83201"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/presentation/airport-storm-final.png",
+      "destination": "src/website/presentation/airport-storm-final.png",
+      "sha256": "b9202e3a0df3425519837e93327a34b501a7a87b71c32ae4b382afdcede78004"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/presentation/arrival-crew-final.png",
+      "destination": "src/website/presentation/arrival-crew-final.png",
+      "sha256": "98586bccf193c97619703b0f540cc3df63fe23f22751440ddfcc80a10baea62e"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/presentation/blender-fog-final.png",
+      "destination": "src/website/presentation/blender-fog-final.png",
+      "sha256": "221adfe9ff3db6d3df342da5e0b80c8a3c2c387584c9ce57a401ada623f902ae"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/presentation/blender-storm-final.png",
+      "destination": "src/website/presentation/blender-storm-final.png",
+      "sha256": "52d9fcafc91ea98fd94dd161797d82fdb5c159f884b6d01300530f9ab917a2e1"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/presentation/classroom-flight.png",
+      "destination": "src/website/presentation/classroom-flight.png",
+      "sha256": "82749da5e3d581da47b1caa68301ad204723785e1db60db4d2e0fb01655797da"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/server/budget.mjs",
+      "destination": "src/website/server/budget.mjs",
+      "sha256": "0a3e3c3cbfe937edd70ad8b02f1523b7f5b7b62d8cedad6d2041b98ba6f4c80d"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/server/classroom-page.mjs",
+      "destination": "src/website/server/classroom-page.mjs",
+      "sha256": "71e116138a7ef39abb8dca302c21d9991a0777a6d00f0256632532e5fc764280"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/server/flights.mjs",
+      "destination": "src/website/server/flights.mjs",
+      "sha256": "329187147b7e0a52daf905db11d256de0f65123c68aa607e6398b2e83c7b8baa"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/server/http.mjs",
+      "destination": "src/website/server/http.mjs",
+      "sha256": "f41f7a50d08495d79e7bf3808ad5b2d55738f1f382a13f2395bae55fa0952eab"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/server/open-browser.mjs",
+      "destination": "src/website/server/open-browser.mjs",
+      "sha256": "a6c40109176f11a82c9af74e51ea682436f2bef6571bbc2b9d136745dec9cce2"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/server/public-health.mjs",
+      "destination": "src/website/server/public-health.mjs",
+      "sha256": "edb7d855605178912e9bc2fbc3f328d04a8ebd47e0479571e02fea9d33212269"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/server/qr-files.mjs",
+      "destination": "src/website/server/qr-files.mjs",
+      "sha256": "32d7c754c4da8f7905bf5c3400c0d45acdca2851f6d7f982d022d9295900d85a"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/server/qr-png.mjs",
+      "destination": "src/website/server/qr-png.mjs",
+      "sha256": "ec0f51c066bd40dd0699be7792bc495f8ae752f271c2d35b15c3b4c2ac633c45"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/server/schema.sql",
+      "destination": "src/website/server/schema.sql",
+      "sha256": "92046f41754f87f7ffe16df9c5b75d94b8ac1267f40bdad1fc9fb7d61b751566"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/server/settings.mjs",
+      "destination": "src/website/server/settings.mjs",
+      "sha256": "578e6fbee832466113af7fa81624c9e7d523dddeba93e2a4aeb8bbdcf40dbaf7"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/server/startup-flow.mjs",
+      "destination": "src/website/server/startup-flow.mjs",
+      "sha256": "061449301168111b088479bec43f19b8299d09b3d4c4b4a81be10c6c908d67ee"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/server/storage.mjs",
+      "destination": "src/website/server/storage.mjs",
+      "sha256": "502449d3764c65fbec12f9e4f1e1cd24cbbb6c40489dbe9219ee67b806dfb8ed"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/server/tunnel-state.mjs",
+      "destination": "src/website/server/tunnel-state.mjs",
+      "sha256": "d517100ebb9db199bd528b94fc13e1b0abf1fd480378de017bde5dffa65f61c2"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/tests/airport-activity.mjs",
+      "destination": "src/website/tests/airport-activity.mjs",
+      "sha256": "4daa2675ff616b0e9489845aaea7ad25bc1360342906a7ce9a15432c28ca0ecc"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/tests/classroom-sharing.mjs",
+      "destination": "src/website/tests/classroom-sharing.mjs",
+      "sha256": "15a62484801abff2667fb6a866e7f5f2067757307bab43bf0c2945932bca55fc"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/tests/flight-sequence.mjs",
+      "destination": "src/website/tests/flight-sequence.mjs",
+      "sha256": "2b413744419554461343e91ccd085c8958f303878c310b4e030f562bfcc88279"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/tests/local-server.mjs",
+      "destination": "src/website/tests/local-server.mjs",
+      "sha256": "01c32be5d7875a62386dbd8d1b91611291ba0d27b408b3669d0e392bd7b7f065"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/tests/route-controls.mjs",
+      "destination": "src/website/tests/route-controls.mjs",
+      "sha256": "8fa0e12b3164db40c8289877a479be9479e5fcf5b5a37126d7f508e2f246fd26"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/tests/test-projects.mjs",
+      "destination": "src/website/tests/test-projects.mjs",
+      "sha256": "bfb1f47134d82a3417030caa05104cd0e16ff1a854c3ae5faf62c90f54e44980"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/tests/weather-unloading.mjs",
+      "destination": "src/website/tests/weather-unloading.mjs",
+      "sha256": "f22e94edde6eac42abc3a61ba03c512df8335a03032ce4791c6ff8f72cbed7a3"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/training-data/metadata.json",
+      "destination": "src/website/training-data/metadata.json",
+      "sha256": "024a754c9c3b19ac3b565a60d3423af3898d88ad526873be82c74b4425e8ee56"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/training-data/README.md",
+      "destination": "src/website/training-data/README.md",
+      "sha256": "fe1282b516381405712885f849f7ef38a952e5af0d5c0f587626b4772240543c"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/training-data/south_india_synthetic_all.csv",
+      "destination": "src/website/training-data/south_india_synthetic_all.csv",
+      "sha256": "6d36c3ac835875c7b8daef4602c52e005a5fccd996419c7550649674c5d64106"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/training-data/test.csv",
+      "destination": "src/website/training-data/test.csv",
+      "sha256": "df82b04cf46b4e1522fdfd722a1431fb206af86d16480dcc6e98c98d6745f209"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/training-data/train.csv",
+      "destination": "src/website/training-data/train.csv",
+      "sha256": "83bd05093396d08cad987da228b72bfde02ab3cce59d16df422f1277626d3afa"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/training-data/validation.csv",
+      "destination": "src/website/training-data/validation.csv",
+      "sha256": "227dac070515594935d387fedfa3ccd41000079beef2ba18728cd93b05de3b11"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/live/aircraft-viewer.mjs",
+      "destination": "src/website/public/live/aircraft-viewer.mjs",
+      "sha256": "f9d4a2a3df391f212cc372527e8cc099698eccbac60eca0674c11bc79613e4e3"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/live/engine.mjs",
+      "destination": "src/website/public/live/engine.mjs",
+      "sha256": "910ff3dae92279cd8011764e8af485f24e6f2b6087157eefe6d041edf5f49147"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/live/favicon.svg",
+      "destination": "src/website/public/live/favicon.svg",
+      "sha256": "15ff0ea94047ac2da24f488b001a0619792dab07ac9d4a49ae8a163e5eccc38d"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/live/globe.mjs",
+      "destination": "src/website/public/live/globe.mjs",
+      "sha256": "e158e52c013267d4e8f5a5b111dcb273e220f2c504848cbaca56a222848027f7"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/live/index.html",
+      "destination": "src/website/public/live/index.html",
+      "sha256": "0385c6d91b8eff23edca92885f5ff09f1f1a071fb1e5c0bd34025f87b9002c13"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/live/journey.css",
+      "destination": "src/website/public/live/journey.css",
+      "sha256": "d1c30a9e697e6e3ea267104ff0fa230a7f0adb6d658fd9f652a9f57e3a2146e2"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/live/journey.mjs",
+      "destination": "src/website/public/live/journey.mjs",
+      "sha256": "1c38453b77d92c98bb5bca08aaa3e88052a70e29a52ee56671a46570efb69ae1"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/live/route-math.mjs",
+      "destination": "src/website/public/live/route-math.mjs",
+      "sha256": "5658a3ba1afb4029735ea4e8f1cd8a29f733fb8ef4d261eef55713ae4d38d3e8"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/live/site-config.js",
+      "destination": "src/website/public/live/site-config.js",
+      "sha256": "b736450495eb16c5540fc91b17639a0824b6764dd4e07cbe5dc8b81b3832f938"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/.nojekyll",
+      "destination": "src/website/public/simulation/.nojekyll",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/aircraft-viewer.mjs",
+      "destination": "src/website/public/simulation/aircraft-viewer.mjs",
+      "sha256": "f9d4a2a3df391f212cc372527e8cc099698eccbac60eca0674c11bc79613e4e3"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/airport-activity.mjs",
+      "destination": "src/website/public/simulation/airport-activity.mjs",
+      "sha256": "6bf3638ef46b11bcee2dc2fee712c38ecd3696eab48e57db78e9eb919534f623"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/airport-scene.mjs",
+      "destination": "src/website/public/simulation/airport-scene.mjs",
+      "sha256": "b1d421dbfe77eee005815cd5fbee7820dc7ca61489527efe67d4dfa9098b2d4c"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/airport-traffic.mjs",
+      "destination": "src/website/public/simulation/airport-traffic.mjs",
+      "sha256": "da4e24c8f243d8a05497e6b886ccf3118247d4d55a6a868cff2ff22999fce653"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/airport-weather.mjs",
+      "destination": "src/website/public/simulation/airport-weather.mjs",
+      "sha256": "ec47e30808de2a5aff2184a30c796d37675e5630952362c9da9c71fe57f685e8"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/arrival-unloading.mjs",
+      "destination": "src/website/public/simulation/arrival-unloading.mjs",
+      "sha256": "111a84d7b9e8193a52c2e5b8ff70352be466d4a9f5db2f83ef7be6780400b647"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/engine.mjs",
+      "destination": "src/website/public/simulation/engine.mjs",
+      "sha256": "910ff3dae92279cd8011764e8af485f24e6f2b6087157eefe6d041edf5f49147"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/favicon.svg",
+      "destination": "src/website/public/simulation/favicon.svg",
+      "sha256": "15ff0ea94047ac2da24f488b001a0619792dab07ac9d4a49ae8a163e5eccc38d"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/flight-sequence.mjs",
+      "destination": "src/website/public/simulation/flight-sequence.mjs",
+      "sha256": "3493987a2292272fa2c5bd7a3b8238c2dc8624cff8a7320e120e9050736fad39"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/globe.mjs",
+      "destination": "src/website/public/simulation/globe.mjs",
+      "sha256": "54b6770b86d9a5b524ae9982e33a3661b2f7bdeb8cb5943198350ca4e210a36c"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/index.html",
+      "destination": "src/website/public/simulation/index.html",
+      "sha256": "84cad3f225975fc35b2de2236f8adb7f5ccdfaf2d7f6d4df329f4759958c14a1"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/journey.css",
+      "destination": "src/website/public/simulation/journey.css",
+      "sha256": "a4472e47ad14a1c75abdddb40a8aa901ad636e93f7a2306bcc439ca97872dc4c"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/journey.mjs",
+      "destination": "src/website/public/simulation/journey.mjs",
+      "sha256": "0b8daad253cdcd807b7e6672528d0b7ac1dbda426599b1cdefa0eeff03048284"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/route-math.mjs",
+      "destination": "src/website/public/simulation/route-math.mjs",
+      "sha256": "5658a3ba1afb4029735ea4e8f1cd8a29f733fb8ef4d261eef55713ae4d38d3e8"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/site-config.js",
+      "destination": "src/website/public/simulation/site-config.js",
+      "sha256": "0dfa773733a959cde060196e6025f09aea754c32aefba43f220ba5f113540715"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/unloading-state.mjs",
+      "destination": "src/website/public/simulation/unloading-state.mjs",
+      "sha256": "6bafa46445909dc607e0480c62d51c3bea20f1db4d9c86088001467d844c28d7"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/weather-effects.mjs",
+      "destination": "src/website/public/simulation/weather-effects.mjs",
+      "sha256": "3bc3ccc2f4fdcf937c87fc93d7ab2a2a2f0851f7f1d75d10d33c171551f145f3"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/weather-profile.mjs",
+      "destination": "src/website/public/simulation/weather-profile.mjs",
+      "sha256": "6240a6db8b724a1e2b855609ecef80d4f4175c6b1d8963c443a76a4ffb69031c"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/weather-timing.mjs",
+      "destination": "src/website/public/simulation/weather-timing.mjs",
+      "sha256": "35f3fa803086ee3e95e5c0cb816eb68dd8336d9b68ea02dc58c1af59926f0f73"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/live/assets/aeropredict-airliner-v2.glb",
+      "destination": "src/website/public/live/assets/aeropredict-airliner-v2.glb",
+      "sha256": "625edc2e10fec1b24b60978ed8cfd94992631d003c43b28b7bb667fd5d18a428"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/live/assets/aeropredict-airliner.glb",
+      "destination": "src/website/public/live/assets/aeropredict-airliner.glb",
+      "sha256": "5b023ad75031d75d25f8f4ecd8be2dcad83cf7653984f23256c91f23270caaf2"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/live/data/AeroPredict_Training_Data.zip",
+      "destination": "src/website/public/live/data/AeroPredict_Training_Data.zip",
+      "sha256": "db20770d6804706ff49caf7339199b8ac657d6f852dd56d15c4da03581172e56"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/live/data/south_india_synthetic_all.csv",
+      "destination": "src/website/public/live/data/south_india_synthetic_all.csv",
+      "sha256": "6d36c3ac835875c7b8daef4602c52e005a5fccd996419c7550649674c5d64106"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/live/vendor/BufferGeometryUtils.js",
+      "destination": "src/website/public/live/vendor/BufferGeometryUtils.js",
+      "sha256": "9be041e96308775d00e2695cc607645b9a9b64fd7c0e759dd8f7c00a8d92becb"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/live/vendor/countries.geojson",
+      "destination": "src/website/public/live/vendor/countries.geojson",
+      "sha256": "6866c877d39cba9c357620878839b336d569f8c662d3cfab4cb1dbe2d39c977f"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/live/vendor/earth-nasa.jpg",
+      "destination": "src/website/public/live/vendor/earth-nasa.jpg",
+      "sha256": "d4dc80a6ef571939d0abe04a9bed3d3d1e6cd63e59514be1c5e43a6b069e6f1e"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/live/vendor/GLTFLoader.js",
+      "destination": "src/website/public/live/vendor/GLTFLoader.js",
+      "sha256": "ecbe94cdeff24863ce2ee79c3547225e6654a5233580caa3649ef11259e4d387"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/live/vendor/QRCODE-README.md",
+      "destination": "src/website/public/live/vendor/QRCODE-README.md",
+      "sha256": "e06df0c7d66795812624af7dbc54989c614dd3a645fa1094d976bb910e7ca545"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/live/vendor/qrcode.js",
+      "destination": "src/website/public/live/vendor/qrcode.js",
+      "sha256": "18ae399f81182bc9de916e9c77b195df20cc58d6f2d55a62b085a299f1bf1780"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/live/vendor/THIRD_PARTY_NOTICES.md",
+      "destination": "src/website/public/live/vendor/THIRD_PARTY_NOTICES.md",
+      "sha256": "b0e73288803e4fc96c64ce3caf7e69efa39acdbaf984dcca83f7351418f12eb3"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/live/vendor/THREE-LICENSE.txt",
+      "destination": "src/website/public/live/vendor/THREE-LICENSE.txt",
+      "sha256": "852e0e8699169bf9f6fdc6bda3e682d078dcbc738b5d33e74df594721bff271d"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/live/vendor/three.min.js",
+      "destination": "src/website/public/live/vendor/three.min.js",
+      "sha256": "170c6789f43217c96b3170f4b42fafe135de7f7cd48497a4218f9757ee1d49fa"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/live/vendor/three.module.js",
+      "destination": "src/website/public/live/vendor/three.module.js",
+      "sha256": "76dea8151bc9352aef3528b4262e249b2604f62543828328db978d060d61a495"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/assets/aeropredict-airliner-v2.glb",
+      "destination": "src/website/public/simulation/assets/aeropredict-airliner-v2.glb",
+      "sha256": "625edc2e10fec1b24b60978ed8cfd94992631d003c43b28b7bb667fd5d18a428"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/assets/aeropredict-airliner.glb",
+      "destination": "src/website/public/simulation/assets/aeropredict-airliner.glb",
+      "sha256": "5b023ad75031d75d25f8f4ecd8be2dcad83cf7653984f23256c91f23270caaf2"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/assets/aeropredict-airport-activity.glb",
+      "destination": "src/website/public/simulation/assets/aeropredict-airport-activity.glb",
+      "sha256": "e6d0ca291648439a9246230fcaba8971ba4cd1eee67b18c4f199182dee713266"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/assets/aeropredict-airport-airliner.glb",
+      "destination": "src/website/public/simulation/assets/aeropredict-airport-airliner.glb",
+      "sha256": "69dd171b6492b7d08732b3fcc5d06e87ca7c75b8ffd48acdac9ae753e44a0bd8"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/assets/aeropredict-airport-v2.glb",
+      "destination": "src/website/public/simulation/assets/aeropredict-airport-v2.glb",
+      "sha256": "116deb5f5f0f9ebb93baee43a495aca371d9366375ac7a7080f4d0b9c222bf2c"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/assets/aeropredict-airport.glb",
+      "destination": "src/website/public/simulation/assets/aeropredict-airport.glb",
+      "sha256": "7b587f397c4b5eb054e970924ed4acb77bf50ab529b767da152ff8df626d8570"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/assets/blender-cloud-volume.png",
+      "destination": "src/website/public/simulation/assets/blender-cloud-volume.png",
+      "sha256": "cf9fa51083815e8c65872fb67094e01fbc650e289bd3804ac259af5cbeb67261"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/assets/blender-lightning.glb",
+      "destination": "src/website/public/simulation/assets/blender-lightning.glb",
+      "sha256": "fa99aa3093411afd0d691da321544e9122d7e481b4f87adb7fca3651ed26af50"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/data/AeroPredict_Training_Data.zip",
+      "destination": "src/website/public/simulation/data/AeroPredict_Training_Data.zip",
+      "sha256": "db20770d6804706ff49caf7339199b8ac657d6f852dd56d15c4da03581172e56"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/data/south_india_synthetic_all.csv",
+      "destination": "src/website/public/simulation/data/south_india_synthetic_all.csv",
+      "sha256": "6d36c3ac835875c7b8daef4602c52e005a5fccd996419c7550649674c5d64106"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/vendor/BufferGeometryUtils.js",
+      "destination": "src/website/public/simulation/vendor/BufferGeometryUtils.js",
+      "sha256": "9be041e96308775d00e2695cc607645b9a9b64fd7c0e759dd8f7c00a8d92becb"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/vendor/countries.geojson",
+      "destination": "src/website/public/simulation/vendor/countries.geojson",
+      "sha256": "6866c877d39cba9c357620878839b336d569f8c662d3cfab4cb1dbe2d39c977f"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/vendor/earth-nasa.jpg",
+      "destination": "src/website/public/simulation/vendor/earth-nasa.jpg",
+      "sha256": "d4dc80a6ef571939d0abe04a9bed3d3d1e6cd63e59514be1c5e43a6b069e6f1e"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/vendor/GLTFLoader.js",
+      "destination": "src/website/public/simulation/vendor/GLTFLoader.js",
+      "sha256": "ecbe94cdeff24863ce2ee79c3547225e6654a5233580caa3649ef11259e4d387"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/vendor/QRCODE-README.md",
+      "destination": "src/website/public/simulation/vendor/QRCODE-README.md",
+      "sha256": "e06df0c7d66795812624af7dbc54989c614dd3a645fa1094d976bb910e7ca545"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/vendor/qrcode.js",
+      "destination": "src/website/public/simulation/vendor/qrcode.js",
+      "sha256": "18ae399f81182bc9de916e9c77b195df20cc58d6f2d55a62b085a299f1bf1780"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/vendor/THIRD_PARTY_NOTICES.md",
+      "destination": "src/website/public/simulation/vendor/THIRD_PARTY_NOTICES.md",
+      "sha256": "b0e73288803e4fc96c64ce3caf7e69efa39acdbaf984dcca83f7351418f12eb3"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/vendor/THREE-LICENSE.txt",
+      "destination": "src/website/public/simulation/vendor/THREE-LICENSE.txt",
+      "sha256": "852e0e8699169bf9f6fdc6bda3e682d078dcbc738b5d33e74df594721bff271d"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/vendor/three.min.js",
+      "destination": "src/website/public/simulation/vendor/three.min.js",
+      "sha256": "170c6789f43217c96b3170f4b42fafe135de7f7cd48497a4218f9757ee1d49fa"
+    },
+    {
+      "source": "outputs/AeroPredict_Local_Presentation/public/simulation/vendor/three.module.js",
+      "destination": "src/website/public/simulation/vendor/three.module.js",
+      "sha256": "76dea8151bc9352aef3528b4262e249b2604f62543828328db978d060d61a495"
+    },
+    {
+      "source": "work/build-training-data.mjs",
+      "destination": "src/data/original_generator_reference.mjs",
+      "sha256": "4d3a956f12fdec1356f12a0791704d546ab3d84d3532d7568fac4c44b5424775"
+    },
+    {
+      "source": "C:\\Users\\24u11\\Documents\\Codex\\2026-10-28\\this-error-is-coming-when-exporting-2\\outputs\\ml_with_project_links.docx",
+      "destination": "reports/Project_Report.docx",
+      "sha256": "da3924643553f0dc9b6def07050dc23d5ece8dcb4e5fb7101ddcda8d6d20108d"
+    },
+    {
+      "source": "outputs/AeroPredict_Presentations/AeroPredict_Class_Proposed_System.pptx",
+      "destination": "presentations/Class_Presentation.pptx",
+      "sha256": "1ec6717cd19749700231c59f99f6905b314b17b59e3e6a4e0f53ad5919e9555c"
+    },
+    {
+      "source": "outputs/AeroPredict_Presentations/AeroPredict_Team_Visual.pptx",
+      "destination": "presentations/Team_Explanation_and_Viva.pptx",
+      "sha256": "bcc6bcfe62005a94ef04239d9d1f4855a4131176de5158edcdc90dd1e8b1d371"
+    },
+    {
+      "source": "outputs/SLAP_Report_Evidence/classification_model.joblib",
+      "destination": "SLAP_Report_Evidence/classification_model.joblib",
+      "sha256": "f409df99929fc3b6916c24158578fe219199869157240f0172be3aae7994fce6"
+    },
+    {
+      "source": "outputs/SLAP_Report_Evidence/metrics.json",
+      "destination": "SLAP_Report_Evidence/metrics.json",
+      "sha256": "ce15c2df4c281508dabcf005c135e4578402b605999fb7538d8ce495860cc4eb"
+    },
+    {
+      "source": "outputs/SLAP_Report_Evidence/ml_demo.py",
+      "destination": "SLAP_Report_Evidence/ml_demo.py",
+      "sha256": "0297b741fb6956e71cd160926f9f13027592a8c67f81a5b4461bf69302a6d850"
+    },
+    {
+      "source": "outputs/SLAP_Report_Evidence/regression_model.joblib",
+      "destination": "SLAP_Report_Evidence/regression_model.joblib",
+      "sha256": "cb388e920e3bf914c543695241165fb554bcdea56202ec898f742b60160ffd5b"
+    },
+    {
+      "source": "outputs/SLAP_Report_Evidence/requirements.txt",
+      "destination": "SLAP_Report_Evidence/requirements.txt",
+      "sha256": "0fb98645f0977032dcf84f3492278825737fe75fc00e68bea34f29cdce35e995"
+    },
+    {
+      "source": "outputs/SLAP_Report_Evidence/run_experiment.py",
+      "destination": "SLAP_Report_Evidence/run_experiment.py",
+      "sha256": "789de9949b491153947fe4d9dba007acc155c9d80465294f4eded221f0a1a5f6"
+    },
+    {
+      "source": "outputs/SLAP_Report_Evidence/slap_numpy_models.py",
+      "destination": "SLAP_Report_Evidence/slap_numpy_models.py",
+      "sha256": "32bccc167c55d693b2f71e8825517f3a6682b401f03ff0f402bea3d2b601f924"
+    },
+    {
+      "source": "outputs/SLAP_Report_Evidence/test_predictions.csv",
+      "destination": "SLAP_Report_Evidence/test_predictions.csv",
+      "sha256": "db6dee1376ebed18396f147a476cd2ee7e9824529987f66f9d7cbaf41e25f1b7"
+    },
+    {
+      "source": "outputs/SLAP_Report_Evidence/data/test.csv",
+      "destination": "SLAP_Report_Evidence/data/test.csv",
+      "sha256": "df82b04cf46b4e1522fdfd722a1431fb206af86d16480dcc6e98c98d6745f209"
+    },
+    {
+      "source": "outputs/SLAP_Report_Evidence/data/train.csv",
+      "destination": "SLAP_Report_Evidence/data/train.csv",
+      "sha256": "83bd05093396d08cad987da228b72bfde02ab3cce59d16df422f1277626d3afa"
+    },
+    {
+      "source": "outputs/SLAP_Report_Evidence/data/validation.csv",
+      "destination": "SLAP_Report_Evidence/data/validation.csv",
+      "sha256": "227dac070515594935d387fedfa3ccd41000079beef2ba18728cd93b05de3b11"
+    },
+    {
+      "source": "outputs/SLAP_Report_Evidence/figures/architecture.png",
+      "destination": "SLAP_Report_Evidence/figures/architecture.png",
+      "sha256": "696a6d2532fc4de305c962524bfefe850ee1646e1228e262786e17e0f2c7c003"
+    },
+    {
+      "source": "outputs/SLAP_Report_Evidence/figures/confusion_matrix.png",
+      "destination": "SLAP_Report_Evidence/figures/confusion_matrix.png",
+      "sha256": "fb8dec4adb40453ab8275414c0868fae77671e72748ede45793a736cc6c28ce1"
+    },
+    {
+      "source": "outputs/SLAP_Report_Evidence/figures/eda_conditions.png",
+      "destination": "SLAP_Report_Evidence/figures/eda_conditions.png",
+      "sha256": "881d4499f7bb36646e1f9cedfa9fbd72ddb25b63a9cd150a8e3aefc00802e385"
+    },
+    {
+      "source": "outputs/SLAP_Report_Evidence/figures/eda_distribution.png",
+      "destination": "SLAP_Report_Evidence/figures/eda_distribution.png",
+      "sha256": "de299dcc3f1d23edd46e567ecd06630892eb76b63f249b62071c066cd99130c6"
+    },
+    {
+      "source": "outputs/SLAP_Report_Evidence/figures/feature_importance.png",
+      "destination": "SLAP_Report_Evidence/figures/feature_importance.png",
+      "sha256": "aa2057ed0446093985249cc0d19f166afa5743256f162699e30868af2e54085d"
+    },
+    {
+      "source": "outputs/SLAP_Report_Evidence/figures/regression_errors.png",
+      "destination": "SLAP_Report_Evidence/figures/regression_errors.png",
+      "sha256": "f3ea2cff711cf2d045a640f693a66f8c3c8e1dc0738b566883b3d315a69f76d4"
+    }
+  ]
+}

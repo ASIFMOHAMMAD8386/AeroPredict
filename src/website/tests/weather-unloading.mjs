@@ -1,0 +1,33 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {weatherProfiles,weatherProfile} from '../public/simulation/weather-profile.mjs';
+import {unloadingState} from '../public/simulation/unloading-state.mjs';
+import {flightPhase,FLIGHT_SECONDS} from '../public/simulation/flight-sequence.mjs';
+import {lightningState} from '../public/simulation/weather-timing.mjs';
+assert.equal(weatherProfiles.Clear.rain,0);
+assert.ok(weatherProfiles.Thunderstorm.rain>weatherProfiles.Rain.rain);
+assert.ok(weatherProfiles.Fog.fogFar<weatherProfiles.Clear.fogNear);
+assert.equal(weatherProfile('unknown'),weatherProfiles.Clear);
+assert.equal(unloadingState(95).visible,false);
+assert.equal(unloadingState(100).visible,true);
+assert.equal(unloadingState(103).hatch,1);
+assert.equal(unloadingState(103).equipment,1);
+assert.ok(unloadingState(110).cases.some(b=>b.visible));
+assert.equal(unloadingState(120).loaded,8);
+assert.ok(unloadingState(120).cases.every(b=>!b.visible));
+assert.equal(flightPhase(110/FLIGHT_SECONDS).id,'unload');
+assert.equal(lightningState(4.2,false).visible,false);
+assert.equal(lightningState(4.2,true).visible,true);
+assert.ok(lightningState(4.16,true).flash>0);
+assert.equal(lightningState(4.16,true,true).flash,0);
+assert.equal(lightningState(6,true).visible,false);
+assert.equal(lightningState(11.7,true).visible,true);
+const asset=readFileSync(new URL('../public/simulation/assets/aeropredict-airport-activity.glb',import.meta.url));
+const gltf=JSON.parse(asset.subarray(20,20+asset.readUInt32LE(12)).toString());
+for(const name of ['CrewPrototype','CargoDoorPrototype','EmptyCartPrototype','BeltLoaderPrototype','SuitcasePrototype']){
+  assert.ok(gltf.nodes.some(n=>n.name===name),`Export must contain ${name}`);
+}
+const bolt=readFileSync(new URL('../public/simulation/assets/blender-lightning.glb',import.meta.url));
+const boltScene=JSON.parse(bolt.subarray(20,20+bolt.readUInt32LE(12)).toString());
+for(let i=0;i<3;i++)assert.ok(boltScene.nodes.some(n=>n.name===`LightningBolt${i}`));
+console.log('PASS: distinct scenario weather and eight bags unloaded before the film ends.');

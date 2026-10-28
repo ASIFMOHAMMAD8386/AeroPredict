@@ -1,0 +1,1 @@
+Open `AeroPredict_Walkthrough.ipynb` in JupyterLab. Run cells from top to bottom. It reads the supplied files, loads the saved models, explains the code and shows figures. It makes no provider requests and does not retrain automatically.

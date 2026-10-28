@@ -1,0 +1,7 @@
+{
+  "authoring": "Blender Cycles volume cloud + emissive branched lightning",
+  "cloud_texture": "blender-cloud-volume.png",
+  "lightning_meshes": 3,
+  "source": "create-weather.py",
+  "seed": 83
+}

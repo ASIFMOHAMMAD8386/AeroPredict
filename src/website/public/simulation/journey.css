@@ -1,0 +1,681 @@
+:root {
+  color-scheme: dark;
+  --ink: #eef4f0;
+  --muted: #9baaa7;
+  --line: #2b393d;
+  --lime: #c1ed9b;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #0b141b;
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+}
+button,
+input,
+select {
+  font: inherit;
+}
+button,
+a,
+input,
+select {
+  touch-action: manipulation;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--lime);
+  outline-offset: 4px;
+}
+header {
+  height: 104px;
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid var(--line);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 25px;
+  font-weight: 800;
+}
+.brand > span {
+  font-size: 22px;
+}
+.brand small {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+nav {
+  display: flex;
+  padding: 5px;
+  background: #152128;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+}
+nav a {
+  padding: 12px 24px;
+  font-size: 14px;
+  border-radius: 100px;
+  color: var(--muted);
+}
+nav .active {
+  background: var(--lime);
+  color: #17251b;
+}
+.quiet {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  padding: 12px 18px;
+  border-radius: 9px;
+}
+.primary {
+  width: 100%;
+  background: var(--lime);
+  border: 0;
+  border-radius: 9px;
+  padding: 18px;
+  color: #142414;
+  font-weight: 800;
+  margin-top: 16px;
+}
+button:hover {
+  filter: brightness(1.12);
+}
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+#choose {
+  max-width: 1250px;
+  margin: auto;
+  padding: 72px 40px 30px;
+  display: grid;
+  grid-template-columns: 1fr 470px;
+  gap: 60px;
+  align-items: center;
+}
+.eyebrow,
+.step {
+  font-size: 11px;
+  letter-spacing: 1.8px;
+  font-weight: 700;
+  color: var(--lime);
+}
+h1 {
+  font-family: Manrope, sans-serif;
+  font-size: clamp(38px, 4.6vw, 66px);
+  line-height: 1.12;
+  letter-spacing: -3px;
+  font-weight: 600;
+  margin: 28px 0;
+}
+h1 em {
+  font-style: normal;
+  color: var(--lime);
+}
+.intro p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--muted);
+  max-width: 430px;
+}
+.picker {
+  background: #142027;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 24px 90px #0003;
+}
+h2 {
+  font-family: Manrope, sans-serif;
+  font-size: 23px;
+  letter-spacing: -0.6px;
+  margin: 16px 0 24px;
+}
+.fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+label {
+  display: block;
+  font-size: 12px;
+  color: #becac5;
+  margin: 14px 0;
+}
+input,
+select {
+  width: 100%;
+  min-width: 0;
+  background: #0d171e;
+  color: var(--ink);
+  border: 1px solid #344349;
+  border-radius: 7px;
+  padding: 12px;
+  margin-top: 9px;
+}
+input[type="range"] {
+  accent-color: var(--lime);
+  padding: 0;
+  margin-top: 21px;
+}
+output {
+  float: right;
+  color: var(--lime);
+}
+.fine,
+details,
+p#freshness,
+p#connection {
+  font-size: 12px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+details {
+  margin-top: 18px;
+}
+summary {
+  cursor: pointer;
+}
+#error {
+  color: #ffb0a2;
+  font-size: 13px;
+}
+.promise {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  padding-top: 26px;
+  color: var(--muted);
+  font-size: 12px;
+}
+footer {
+  max-width: 1250px;
+  padding: 30px 40px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  color: #6f8386;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+#result {
+  max-width: 1440px;
+  margin: auto;
+  padding: 28px 5%;
+}
+.result-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+.experience {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 24px;
+}
+.globe-panel {
+  position: relative;
+  height: 660px;
+  background: radial-gradient(ellipse at center, #132b3b, #080f18 75%);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+}
+.route-title {
+  position: absolute;
+  top: 26px;
+  left: 28px;
+  z-index: 2;
+  pointer-events: none;
+}
+.route-title > span {
+  font-size: 11px;
+  color: var(--lime);
+  letter-spacing: 1.5px;
+}
+.route-title h2 {
+  font-size: 27px;
+  margin: 10px 0;
+}
+.route-title p {
+  font-size: 12px;
+  color: var(--muted);
+}
+#globe {
+  height: 100%;
+  width: 100%;
+  touch-action: none;
+}
+#globe canvas {
+  display: block;
+}
+.globe-tools {
+  position: absolute;
+  left: 20px;
+  bottom: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.globe-tools button {
+  background: #111f2ce6;
+  color: #d5e6e5;
+  border: 1px solid #384e59;
+  border-radius: 7px;
+  padding: 10px;
+  font-size: 11px;
+}
+.map-caption {
+  position: absolute;
+  bottom: 12px;
+  left: 24px;
+  right: 24px;
+  color: #91aab4;
+  font-size: 10px;
+  line-height: 1.6;
+  pointer-events: none;
+}
+.result-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 28px;
+  background: #142027;
+  align-self: start;
+}
+.metric {
+  font-size: 62px;
+  letter-spacing: -3px;
+  font-family: Manrope, sans-serif;
+  color: var(--lime);
+  margin: 20px 0 0;
+}
+.metric small {
+  font-size: 20px;
+  letter-spacing: 0;
+}
+#risk {
+  font-size: 13px;
+  color: var(--lime);
+  margin-top: 8px;
+}
+#explanation {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+dl {
+  margin: 28px 0;
+}
+dl div {
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 12px;
+}
+dt {
+  color: var(--muted);
+}
+dd {
+  margin: 0;
+  text-align: right;
+}
+.note {
+  font-size: 11px;
+  line-height: 1.7;
+  color: var(--muted);
+  border-left: 2px solid #829d70;
+  padding-left: 12px;
+  margin: 24px 0;
+}
+.result-card button {
+  width: 100%;
+}
+#result-status {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+dialog {
+  background: #142027;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 30px;
+  width: min(460px, 90vw);
+}
+dialog::backdrop {
+  background: #000b;
+}
+#qr {
+  background: white;
+  width: 216px;
+  height: 216px;
+  padding: 12px;
+  margin: 24px auto;
+}
+#share-url {
+  overflow-wrap: anywhere;
+  font-size: 12px;
+  color: var(--muted);
+}
+#open-url {
+  color: var(--lime);
+}
+[hidden] {
+  display: none !important;
+}
+@media (max-width: 1000px) {
+  #choose {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 45px 25px;
+  }
+  .experience {
+    grid-template-columns: minmax(0, 1fr) 285px;
+  }
+  .globe-panel {
+    height: 600px;
+  }
+}
+@media (max-width: 760px) {
+  header {
+    height: auto;
+    min-height: 125px;
+    flex-wrap: wrap;
+    padding: 20px 22px;
+    gap: 16px;
+  }
+  .brand {
+    order: 0;
+  }
+  header > .quiet {
+    order: 1;
+    padding: 10px;
+    font-size: 12px;
+  }
+  nav {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+  }
+  nav a {
+    flex: 1;
+    text-align: center;
+  }
+  #choose {
+    display: block;
+    padding: 32px 22px;
+  }
+  .intro p {
+    font-size: 15px;
+  }
+  .intro {
+    margin-bottom: 30px;
+  }
+  h1 {
+    letter-spacing: -2px;
+  }
+  .picker {
+    padding: 23px;
+  }
+  .promise {
+    margin-top: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .experience {
+    grid-template-columns: 1fr;
+  }
+  .globe-panel {
+    height: 520px;
+  }
+  .result-top .eyebrow {
+    display: none;
+  }
+  #result {
+    padding: 22px 16px;
+  }
+  .result-card {
+    padding: 25px;
+  }
+  .metric {
+    font-size: 55px;
+  }
+  .route-title {
+    left: 20px;
+  }
+  .route-title h2 {
+    font-size: 22px;
+  }
+  footer {
+    gap: 16px;
+    flex-direction: column;
+    padding: 22px;
+  }
+  .globe-tools {
+    left: 16px;
+    right: 16px;
+    bottom: 72px;
+  }
+  .map-caption {
+    left: 16px;
+  }
+  .fields {
+    gap: 10px;
+  }
+}
+body[data-mode="simulation"] {
+  --lime: #ffbf55;
+  background:
+    radial-gradient(ellipse at 10% 25%, #302519 0, transparent 48%), #10151c;
+}
+body[data-mode="live"] {
+  --lime: #70baff;
+  background:
+    radial-gradient(ellipse at 10% 25%, #152c49 0, transparent 48%), #0b141f;
+}
+body[data-mode="simulation"] .picker {
+  border-top: 3px solid #ffbf55;
+}
+body[data-mode="live"] .picker {
+  border-top: 3px solid #70baff;
+}
+#choose {
+  padding-top: 38px;
+  gap: 40px;
+}
+h1 {
+  font-size: clamp(36px, 4vw, 56px);
+  margin: 20px 0;
+}
+.intro p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+.mode-badge {
+  display: inline-block;
+  border: 1px solid currentColor;
+  border-radius: 30px;
+  padding: 9px 14px;
+  color: var(--lime);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+#aircraft-preview {
+  width: 100%;
+  height: 235px;
+  touch-action: pan-y;
+  cursor: grab;
+  background: radial-gradient(ellipse, #24334a66, transparent 70%);
+}
+#aircraft-preview canvas {
+  display: block;
+}
+.preview-caption {
+  font-size: 10px !important;
+  margin: 0;
+  color: var(--muted);
+}
+#budget {
+  padding: 12px;
+  border: 1px solid #35516e;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #c1d8f4;
+}
+.downloads {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  color: var(--lime);
+  font-size: 11px;
+}
+.downloads a {
+  text-decoration: underline;
+}
+@media (max-width: 760px) {
+  #aircraft-preview {
+    height: 210px;
+  }
+  #choose {
+    padding-top: 28px;
+  }
+  .intro {
+    margin-bottom: 24px;
+  }
+}
+
+.intro > .eyebrow {
+  display: none;
+}
+.globe-panel {
+  height: clamp(460px, 68vh, 660px);
+}
+
+#globe {
+  cursor: grab;
+  user-select: none;
+}
+#globe:active {
+  cursor: grabbing;
+}
+.orbit-hint {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  color: #9badbd;
+  font-size: 10px;
+  pointer-events: none;
+}
+.globe-tools {
+  max-width: calc(100% - 32px);
+}
+@media (max-width: 760px) {
+  .orbit-hint {
+    top: 110px;
+    left: 20px;
+    right: auto;
+  }
+  .globe-tools {
+    bottom: 78px;
+    gap: 5px;
+  }
+  .globe-tools button {
+    padding: 9px;
+  }
+}
+
+/* Keep QR sharing within narrow phone screens. */
+dialog{width:min(460px,calc(100vw - 28px));max-width:calc(100vw - 28px);padding:20px}#qr{width:min(216px,100%);height:auto;aspect-ratio:1}#qr svg{display:block;width:100%;height:100%}
+
+/* Route controls stay outside the canvas so zoomed routes remain unobstructed. */
+.globe-panel{height:auto!important;display:flex;flex-direction:column;overflow:hidden}
+.route-title{position:static;padding:22px 24px 10px;pointer-events:auto}
+.route-title h2{margin:8px 0}.route-title p{margin:4px 0}
+.route-kind{display:inline-block;margin-top:10px;padding:7px 10px;border:1px solid #526777;border-radius:7px;font-size:11px;color:#d3e4ef;background:#152330}
+#globe{position:relative;height:clamp(360px,56vh,580px);flex:none;overflow:hidden}
+.airport-label{position:absolute;transform:translate(-50%,10px);font-size:11px;font-weight:800;letter-spacing:1px;color:#fff;background:#101c2de8;padding:4px 7px;border:1px solid #60768b;border-radius:5px;pointer-events:none}
+.orbit-hint{position:static;display:block;margin:12px 20px 0;font-size:11px}
+.globe-tools{position:static;max-width:none;display:flex;flex-direction:column;align-items:stretch;gap:10px;margin:14px 18px 0}
+.view-presets,.rotation-controls,.zoom-controls{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.view-presets button[aria-pressed="true"]{background:var(--lime);color:#101b24;border-color:var(--lime)}
+.globe-tools button{min-height:38px;font-size:12px;padding:9px 12px}
+.zoom-controls{flex-wrap:nowrap}.zoom-controls label{margin:0;font-size:12px}
+.zoom-controls input[type="range"]{flex:1;width:auto;min-width:30px;margin:0;height:24px;background:transparent;border:0}
+.zoom-controls output{font-size:12px;width:46px;text-align:right;color:var(--lime);float:none}
+#view-name{font-size:11px;color:#a9bdcb;margin:0 3px}
+#pause{margin-left:auto}
+.map-caption{position:static;margin:14px 20px 20px;font-size:11px;line-height:1.65}
+@media(max-width:760px){#globe{height:400px}.route-title{padding:18px 18px 10px}.globe-tools{margin:12px}.globe-tools button{padding:8px 10px}.orbit-hint{margin:12px 16px 0}.map-caption{margin:12px 16px 16px}}
+
+.globe-panel>.view-presets{padding:0 18px 14px}.globe-panel>.view-presets button{background:#111f2c;color:#d5e6e5;border:1px solid #384e59;border-radius:7px;padding:10px 12px;font:inherit;font-size:12px}.globe-panel>.view-presets button[aria-pressed="true"]{background:var(--lime);color:#101b24;border-color:var(--lime)}
+
+.intro{align-self:start}
+#aircraft-preview{height:clamp(235px,23vw,310px);touch-action:none}#aircraft-preview:active{cursor:grabbing}
+.intro{align-self:start}
+
+.presentation-actions{display:flex;gap:8px;flex-wrap:wrap}.result-top{gap:12px;flex-wrap:wrap}
+.presentation-actions button{font-size:12px}.presentation-actions #present{background:var(--lime);color:#101b24;font-weight:700}
+.presentation-actions #takeoff-shot{border-color:var(--lime);color:var(--lime);font-weight:700}
+.aircraft-dialog{width:min(1100px,95vw);max-width:95vw;padding:24px}.aircraft-dialog-top{display:flex;align-items:center;justify-content:space-between;gap:20px}.aircraft-dialog h2{margin:8px 0}.aircraft-dialog p{font-size:12px;color:var(--muted);text-align:center}.aircraft-stage{width:100%;height:clamp(300px,62vh,680px);touch-action:none;background:radial-gradient(ellipse,#273e5666,transparent 75%);cursor:grab}.aircraft-stage canvas{display:block}
+.journey-playback{padding:14px 20px 2px;background:#101c28;border-top:1px solid #2c414c}.playback-heading{display:flex;justify-content:space-between;font-size:13px;gap:12px}.playback-heading strong{color:var(--lime)}.journey-playback input[type="range"]{margin:14px 0;width:100%;background:transparent;border:0;padding:0}.playback-buttons{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.playback-buttons button{background:#172c3b;color:var(--ink);border:1px solid #425969;border-radius:6px;padding:9px 12px;font-size:12px}.playback-buttons label{margin:0}.playback-buttons select{width:76px;margin:0;padding:7px}.route-legend{font-size:10px;color:#b3c9d2}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+body[data-mode="live"] #journey-playback{display:none}
+body.presenting header,body.presenting footer,body.presenting .result-card,body.presenting .result-top>.eyebrow{display:none}
+body.presenting #result{max-width:none;padding:12px 20px}body.presenting .result-top{margin-bottom:10px}body.presenting .experience{grid-template-columns:1fr}body.presenting .result-top>.presentation-actions{margin-left:auto}
+body.presenting .route-title{display:grid;grid-template-columns:auto 1fr;column-gap:24px;padding:12px 20px 8px;align-items:center}body.presenting .route-title>span{grid-column:1}body.presenting .route-title h2{grid-column:1;grid-row:2;margin:3px 0;font-size:28px}body.presenting .route-title p{grid-column:2;grid-row:1;font-size:12px}body.presenting .route-kind{grid-column:2;grid-row:2;justify-self:start;margin-top:0}
+body.presenting #globe{height:clamp(280px,calc(100dvh - 300px),850px)}body.presenting .globe-panel>.view-presets{padding:0 18px 10px}body.presenting .globe-tools,body.presenting .orbit-hint{display:none}body.presenting .journey-playback{padding:10px 20px}body.presenting .journey-playback input{margin:8px 0}body.presenting .map-caption{margin:8px 20px 12px;font-size:10px}body.presenting .playback-buttons{gap:10px}body.presenting .route-legend{font-size:11px}
+@media(max-width:600px){.presentation-actions{width:100%}.aircraft-dialog{padding:14px}.aircraft-dialog-top h2{font-size:20px}body.presenting #result{padding:10px}body.presenting .route-title{display:block}body.presenting #globe{height:360px}body.presenting .route-title p{font-size:11px}.route-legend{width:100%}}
+
+body.presenting .airport-label{font-size:13px;padding:5px 8px}.playback-buttons #pause{margin-left:0}
+
+/* Blender airport film shares the same playback clock as the globe. */
+.airport-stage{position:absolute;inset:0;background:#b8d7e5;z-index:2;touch-action:none}
+.airport-stage canvas{width:100%;height:100%}
+.flight-bridge{position:absolute;inset:0;z-index:3;pointer-events:none;width:100%;height:100%}
+.airport-hud{position:absolute;left:16px;top:14px;padding:10px 13px;background:#0b2131df;border:1px solid #9bb6c455;border-radius:8px;pointer-events:none;max-width:calc(100% - 32px)}
+.airport-hud strong,.airport-hud span{display:block}.airport-hud strong{font-size:13px;color:#fff}.airport-hud span{font-size:10px;color:#b5cbd8;margin-top:4px}
+.airport-cameras{position:absolute;bottom:14px;left:14px;right:14px;display:flex;flex-wrap:wrap;gap:7px}
+.airport-cameras button{padding:9px 12px;border-radius:7px;border:1px solid #c2d7e066;background:#0b2131e8;color:#ecf4f8;font-size:11px}
+.airport-cameras button[aria-pressed="true"]{background:#ffbf55;color:#17212b;border-color:#ffbf55}
+.airport-cameras{flex-wrap:nowrap;overflow-x:auto;padding-bottom:2px;scrollbar-width:thin}.airport-cameras button{flex-shrink:0;white-space:nowrap}
+.airport-loading{position:absolute;inset:0;display:grid;place-items:center;background:#102332;color:#ffbf55;font-size:15px}
+.flight-stages{display:flex;gap:5px;flex-wrap:wrap;margin:0 0 12px}
+.flight-stages button{font-size:10px;padding:7px 9px;background:transparent;color:#a8bec9;border:1px solid #354d5b;border-radius:5px;cursor:pointer}
+.flight-stages button[aria-current="true"]{background:#ffbf5522;border-color:#ffbf55;color:#ffca76}
+body.presenting #globe{height:clamp(230px,calc(100dvh - 405px),850px)}
+body.presenting .flight-stages{margin-bottom:8px}body.presenting .flight-stages button{padding:5px 8px}
+@media(max-width:600px){.airport-cameras button{padding:8px;font-size:10px}.airport-hud{top:10px;left:10px}body.presenting #globe{height:360px}}
